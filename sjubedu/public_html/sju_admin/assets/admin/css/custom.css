@@ -1,0 +1,57 @@
+.marginleft{ margin-left:10px !important;}
+.searchinputclass{margin-top:-6px !important;}
+.loading {
+				width: 30%;
+				position: fixed;
+				margin-left:40%;
+				margin-top:12%;
+			}
+.userpagination {cursor:pointer;}
+.hnd{cursor:pointer;}
+.runs{margin-left:5px;}
+#progressbox {
+    border: 1px solid #0099CC;
+    border-radius: 3px;
+    display: none;
+    margin: -30px 117px 8px;
+    padding: 1px;
+    text-align: left;
+    width: 400px;
+}
+#progressbargallery {
+    background-color: #003333;
+    border-radius: 3px;
+    height: 20px;
+    width: 1%;
+}
+#statustxt {
+    color: #000000;
+    display: inline-block;
+    left: 35%;
+    position: absolute;
+    top: 8px;
+}
+.moreviewmargin{
+	margin-top:7px !important;
+}
+.parent{
+	position: relative;	
+}
+.child {
+    display: block;    
+     z-index:5;
+    position:absolute; background-color:#ccc; cursor:pointer;
+	padding:3px 5px 5px 5px ; border-radius:3px; margin-left:5%; bottom:5px;
+}
+/*
+.parent:hover .child {
+    display: block;
+    z-index:5;
+    position:absolute; background-color:#ccc; cursor:pointer;
+	padding:3px 0px 0px 5px ; border-radius:3px; margin-left:5%; bottom:5px;
+}*/
+.tablescroll{ display: block; 
+        overflow-x: auto;
+        white-space: nowrap; 
+		height:auto !important; width:100% !important;
+}

@@ -1,0 +1,41 @@
+# Disable directory listing
+Options -Indexes
+
+# Block direct access to sensitive admin files
+<FilesMatch "\.(log|ini|env|sql|bak|json|lock|md|txt|sh|py)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block PHP execution in upload folders within admin
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Block PHP files in upload directories
+RewriteRule ^assets/admin/uploads/.*\.(php|php5|phtml|pl|py|sh|cgi)$ - [F,L]
+
+# Block path traversal
+RewriteCond %{REQUEST_URI} (\.\./|%2e%2e%2f) [NC]
+RewriteRule .* - [F,L]
+
+# Route all other requests through index.php (CodeIgniter style)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
+
+# Restrict HTTP methods — admin only needs GET and POST
+<LimitExcept GET POST HEAD>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</LimitExcept>
