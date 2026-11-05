@@ -1,0 +1,28 @@
+# Ignore everything
+*
+
+# Un-ignore all directories
+!*/
+
+# Un-ignore specific file types
+!*.php
+!*.html
+!*.xml
+!*.css
+!*.js
+!*.json
+!*.md
+!*.txt
+!*.yml
+!*.docx
+!*.xlsx
+!*.pptx
+!*.csv
+!*.svg
+!*.ico  
+
+
+# Un-ignore specific hidden config files
+!.htaccess
+!.gitignore
+*.pdf
