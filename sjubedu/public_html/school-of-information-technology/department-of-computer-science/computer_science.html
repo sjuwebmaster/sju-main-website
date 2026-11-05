@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_B_Nithya.webp" class="card-img-top" alt="B. Nithya">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="Mzk.php" class="text-decoration-none">B. Nithya</a></h5>
+                        <p class="card-text text-muted small">Associate Professor - PG Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="Mzk.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Mr_Selwyn_Paul_J.webp" class="card-img-top" alt="Selwyn Paul J">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NDYy.php" class="text-decoration-none">Selwyn Paul J</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - NSS Programme Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="NDYy.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Banu_M.webp" class="card-img-top" alt="BANU M">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTk1.php" class="text-decoration-none">BANU M</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - JWL Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTk1.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Mrinmoyee_Bhattacharya.webp" class="card-img-top" alt="Mrinmoyee Bhattacharya">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NjA.php" class="text-decoration-none">Mrinmoyee Bhattacharya</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="NjA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Sandhya_N.webp" class="card-img-top" alt="SANDHYA N">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTA.php" class="text-decoration-none">SANDHYA N</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="OTA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_A_M_Bojamma.webp" class="card-img-top" alt="A M Bojamma">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NjI.php" class="text-decoration-none">A M Bojamma</a></h5>
+                        <p class="card-text text-muted small">Associate Professor - (Acting) Dean</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="NjI.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Mr_Prasad_C_N.webp" class="card-img-top" alt="PRASAD C N">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY3.php" class="text-decoration-none">PRASAD C N</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTY3.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Annie_Syrien.webp" class="card-img-top" alt="ANNIE SYRIEN">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTE4Ng.php" class="text-decoration-none">ANNIE SYRIEN</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTE4Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Puneeth_Kumar_B_S.webp" class="card-img-top" alt="Puneeth Kumar B S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTMx.php" class="text-decoration-none">Puneeth Kumar B S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="OTMx.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Deepa_Nagalavi.webp" class="card-img-top" alt="Deepa Nagalavi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTM5NA.php" class="text-decoration-none">Deepa Nagalavi</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTM5NA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Mr_Melwyn_Amrithraj.webp" class="card-img-top" alt="Melwyn Amrithraj">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQ5Mw.php" class="text-decoration-none">Melwyn Amrithraj</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTQ5Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Periyasamy_P.webp" class="card-img-top" alt="Periyasamy P">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQxOQ.php" class="text-decoration-none">Periyasamy P</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTQxOQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Shalini_S.webp" class="card-img-top" alt="Shalini S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU4Mw.php" class="text-decoration-none">Shalini S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTU4Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Sruthi_Surendran_P.webp" class="card-img-top" alt="SRUTHI SURENDRAN P">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY1Mg.php" class="text-decoration-none">SRUTHI SURENDRAN P</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTY1Mg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Manivannan_T.webp" class="card-img-top" alt="MANIVANNAN T">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY2MQ.php" class="text-decoration-none">MANIVANNAN T</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTY2MQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Pooja_A.webp" class="card-img-top" alt="POOJA A">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY4MA.php" class="text-decoration-none">POOJA A</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTY4MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Junaida_Nallakkandy.webp" class="card-img-top" alt="JUNAIDA NALLAKKANDY">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY2Ng.php" class="text-decoration-none">JUNAIDA NALLAKKANDY</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTY2Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Saranya_M.webp" class="card-img-top" alt="Saranya M">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY4OQ.php" class="text-decoration-none">Saranya M</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTY4OQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Harish_H.webp" class="card-img-top" alt="Harish H">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc5NA.php" class="text-decoration-none">Harish H</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTc5NA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Prakriti_Thapa.webp" class="card-img-top" alt="Prakriti Thapa">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc5Nw.php" class="text-decoration-none">Prakriti Thapa</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTc5Nw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Sivakumar_T.webp" class="card-img-top" alt="Sivakumar  T">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg2MA.php" class="text-decoration-none">Sivakumar  T</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTg2MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_B_G_Prashanthi.webp" class="card-img-top" alt="Dr. B G PRASANTHI">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NjM5.php" class="text-decoration-none">Dr. B G PRASANTHI</a></h5>
+                        <p class="card-text text-muted small">Associate Professor - Associate Dean</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="NjM5.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Fr_Denzil_Lobo_SJ.webp" class="card-img-top" alt="Fr.DENZIL LOBO">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTAwMg.php" class="text-decoration-none">Fr.DENZIL LOBO</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - Director</p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTAwMg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Mary_Merline_Rani.webp" class="card-img-top" alt="C MARY MERLINE RANI">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="ODA.php" class="text-decoration-none">C MARY MERLINE RANI</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor </p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="ODA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Shashikala_D.webp" class="card-img-top" alt="SHASHIKALA.D">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="Njc2.php" class="text-decoration-none">SHASHIKALA.D</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor </p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="Njc2.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Mr_Timothy_Paul.webp" class="card-img-top" alt="TIMOTHY PAUL L">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTE4Nw.php" class="text-decoration-none">TIMOTHY PAUL L</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor </p>
+                        <div class="mb-3"><span class="badge bg-secondary">COMPUTER SCIENCE</span></div>
+                        <a href="MTE4Nw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

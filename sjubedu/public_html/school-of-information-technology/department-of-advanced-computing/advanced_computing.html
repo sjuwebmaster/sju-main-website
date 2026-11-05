@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_Jayati_Bhadra.webp" class="card-img-top" alt="JAYATI BHADRA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MjMz.php" class="text-decoration-none">JAYATI BHADRA</a></h5>
+                        <p class="card-text text-muted small">Associate Professor - HOD</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MjMz.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_Sivakannan_S.webp" class="card-img-top" alt="SIVAKANNAN S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTMw.php" class="text-decoration-none">SIVAKANNAN S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="OTMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_Francis_Densil_Raj_V.webp" class="card-img-top" alt="FRANCIS DENSIL RAJ V">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTcw.php" class="text-decoration-none">FRANCIS DENSIL RAJ V</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="OTcw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Ms_Jeshma_Nishitha_Dsouza.webp" class="card-img-top" alt="JESHMA NISHITHA DSOUZA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTA1Nw.php" class="text-decoration-none">JESHMA NISHITHA DSOUZA</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PROFESSIONAL COURSES</span></div>
+                        <a href="MTA1Nw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_Sanjay_Dutta.webp" class="card-img-top" alt="SANJAY DUTTA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="Mjcy.php" class="text-decoration-none">SANJAY DUTTA</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="Mjcy.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Mr_Aaran_lawrence_Dlima.webp" class="card-img-top" alt="AARAN LAWRENCE DLIMA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTYzMw.php" class="text-decoration-none">AARAN LAWRENCE DLIMA</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MTYzMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_PUNEETH_S.webp" class="card-img-top" alt="PUNEETH S.">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg2Mw.php" class="text-decoration-none">PUNEETH S.</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MTg2Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_Srinivas_Bhogle.webp" class="card-img-top" alt="SRINIVAS BHOGLE">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="Njk2.php" class="text-decoration-none">SRINIVAS BHOGLE</a></h5>
+                        <p class="card-text text-muted small">Adjunct Faculty</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="Njk2.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced+Computing/Mr_Praveen_Kumar.webp" class="card-img-top" alt="Mr. Praveen Kumar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTAwNg==.php" class="text-decoration-none">Mr. Praveen Kumar</a></h5>
+                        <p class="card-text text-muted small">Adjunct Faculty</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MTAwNg==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced+Computing/Mr_K_Sasi_Kiran.webp" class="card-img-top" alt="Mr K Sasi Kiran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQ3Mw==.php" class="text-decoration-none">Mr K Sasi Kiran</a></h5>
+                        <p class="card-text text-muted small">Adjunct Faculty</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MTQ3Mw==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced+Computing/Mr_Amandeep_Singh_Khanna.webp" class="card-img-top" alt="Mr Amandeep Singh Khanna">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTUwMg==.php" class="text-decoration-none">Mr Amandeep Singh Khanna</a></h5>
+                        <p class="card-text text-muted small">Adjunct Faculty</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MTUwMg==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Advanced%20Computing/Dr_Asha_K.webp" class="card-img-top" alt="Asha.K">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTA5MA.php" class="text-decoration-none">Asha.K</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIG DATA ANALYTICS</span></div>
+                        <a href="MTA5MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>
