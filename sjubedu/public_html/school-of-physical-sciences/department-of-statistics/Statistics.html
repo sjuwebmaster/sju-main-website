@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Archana_V.webp" class="card-img-top" alt="Dr Archana V">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTMz.php" class="text-decoration-none">Dr Archana V</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - HOD</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="OTMz.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical Science/stats/Ms_Arpita_Iranna.webp" class="card-img-top" alt="Ms Arpita Iranna">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI4Mw.php" class="text-decoration-none">Ms Arpita Iranna</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTI4Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Shubhashree_Joshi.webp" class="card-img-top" alt="Dr Shubhashree Joshi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI3Nw==.php" class="text-decoration-none">Dr Shubhashree Joshi</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - PG Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTI3Nw==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Gulbadin_Farooq_Dar.webp" class="card-img-top" alt="Dr Gulbadin Farooq Dar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQ1Ng.php" class="text-decoration-none">Dr Gulbadin Farooq Dar</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTQ1Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/DR_P_SIVAKUMAR.webp" class="card-img-top" alt="DR P SIVAKUMAR">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQ3Ng==.php" class="text-decoration-none">DR P SIVAKUMAR</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTQ3Ng==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Kavitha_N.webp" class="card-img-top" alt="Dr Kavitha N">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTYwMw.php" class="text-decoration-none">Dr Kavitha N</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTYwMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_D_Victorseelan.webp" class="card-img-top" alt="Dr D Victorseelan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY2Mw==.php" class="text-decoration-none">Dr D Victorseelan</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTY2Mw==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Babitha.webp" class="card-img-top" alt="Dr Babitha">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTcxMg==.php" class="text-decoration-none">Dr Babitha</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTcxMg==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Anakha_K_K.webp" class="card-img-top" alt="Dr Anakha K K">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgxOA==.php" class="text-decoration-none">Dr Anakha K K</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTgxOA==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Sarode_Rekha.webp" class="card-img-top" alt="Dr Sarode Rekha">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgzMg==.php" class="text-decoration-none">Dr Sarode Rekha</a></h5>
+                        <p class="card-text text-muted small">Assistant Proffessor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTgzMg==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Dr_Harisankar_S.webp" class="card-img-top" alt="Dr Harisankar S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg1OQ==.php" class="text-decoration-none">Dr Harisankar S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTg1OQ==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Physical%20Science/stats/Mr_Ankush_Sharma.webp" class="card-img-top" alt="Mr Ankush Sharma">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg5MQ==.php" class="text-decoration-none">Mr Ankush Sharma</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">Statistics</span></div>
+                        <a href="MTg5MQ==.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

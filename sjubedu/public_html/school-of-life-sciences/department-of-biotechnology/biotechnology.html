@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Grace_Prabhakar.webp" class="card-img-top" alt="GRACE PRABHAKAR">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQ1.php" class="text-decoration-none">GRACE PRABHAKAR</a></h5>
+                        <p class="card-text text-muted small">Associate Professor - Deputy COE & HOD</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTQ1.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Susan_Mary_Philip.webp" class="card-img-top" alt="Susan Mary Philip">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQ2.php" class="text-decoration-none">Susan Mary Philip</a></h5>
+                        <p class="card-text text-muted small">Associate Professor - (Acting) Dean</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="MTQ2.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Debarati_Chattopadhyay.webp" class="card-img-top" alt="Dr. DEBARATI CHATTOPADHYAY">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="Mzc1.php" class="text-decoration-none">Dr. DEBARATI CHATTOPADHYAY</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - PG Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="Mzc1.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Nirmalya_Basu.webp" class="card-img-top" alt="Nirmalya Basu">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTAyNw.php" class="text-decoration-none">Nirmalya Basu</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTAyNw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Dyna_Susan_Thomas.webp" class="card-img-top" alt="Dyna Susan Thomas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTA2OA.php" class="text-decoration-none">Dyna Susan Thomas</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTA2OA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Nishanth_M_J.webp" class="card-img-top" alt="NISHANTH M J">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTIxMw.php" class="text-decoration-none">NISHANTH M J</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTIxMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Archana_A_Malhari.webp" class="card-img-top" alt="Archana A Malhari">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTUyMw.php" class="text-decoration-none">Archana A Malhari</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTUyMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Sneha_Paul.webp" class="card-img-top" alt="SNEHA PAUL">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTYzNg.php" class="text-decoration-none">SNEHA PAUL</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTYzNg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_M_Gnanaraj.webp" class="card-img-top" alt="M GNANARAJ">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTYzNA.php" class="text-decoration-none">M GNANARAJ</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTYzNA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Valeeta_Marina_Dsouza.webp" class="card-img-top" alt="VALEETA MARINA DSOUZA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTYzNQ.php" class="text-decoration-none">VALEETA MARINA DSOUZA</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTYzNQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_SATGURUNATHAN_T.webp" class="card-img-top" alt="SATGURUNATHAN T">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg0Nw.php" class="text-decoration-none">SATGURUNATHAN T</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTg0Nw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Madappa_M_B.webp" class="card-img-top" alt="Madappa Machamada Bheemaiah">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NjQ3.php" class="text-decoration-none">Madappa Machamada Bheemaiah</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="NjQ3.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Anthony_Johnson.webp" class="card-img-top" alt="Dr. A M ANTHONY JOHNSON">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTAwNw.php" class="text-decoration-none">Dr. A M ANTHONY JOHNSON</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOTECHNOLOGY</span></div>
+                        <a href="MTAwNw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

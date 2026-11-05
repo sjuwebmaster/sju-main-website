@@ -1,0 +1,6 @@
+<?php
+// Auto-generated LIVE Events Organized Page for TEST
+$DEPARTMENT_ID = "92";
+$DEPARTMENT_NAME = "TEST";
+require_once __DIR__ . '/events_organized_live.php';
+?>

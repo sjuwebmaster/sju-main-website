@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/gtm.php'; ?>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>NCC Armed Wings | St Joseph's University, Bengaluru</title>
+    <meta name="description" content="Discover NCC Armed Wings at St Joseph's University, Bengaluru — building disciplined leaders through the National Cadet Corps, adventure activities and social service.">
+    <meta name="keywords" content="NCC Armed Wings SJU Bengaluru, NCC college Bengaluru, National Cadet Corps Karnataka, NCC unit SJU Bangalore, cadet training Bengaluru">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <link rel="canonical" href="https://www.sju.edu.in/services/ncc-armed-wings-of-events">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="St Joseph's University, Bengaluru">
+    <meta property="og:title" content="NCC Armed Wings | St Joseph's University, Bengaluru">
+    <meta property="og:description" content="Discover NCC Armed Wings at St Joseph's University, Bengaluru — building disciplined leaders through the National Cadet Corps, adventure activities and social service.">
+    <meta property="og:url" content="https://www.sju.edu.in/services/ncc-armed-wings-of-events">
+    <meta property="og:image" content="https://www.sju.edu.in/assets/img/st-joseph-university-logo.png">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@StJosephsUniBLR">
+    <meta name="twitter:title" content="NCC Armed Wings | St Joseph's University, Bengaluru">
+    <meta name="twitter:description" content="Discover NCC Armed Wings at St Joseph's University, Bengaluru — building disciplined leaders through the National Cadet Corps, adventure activities and social service.">
+    <meta name="twitter:image" content="https://www.sju.edu.in/assets/img/st-joseph-university-logo.png">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+    <!-- Apple Touch Icon (for iOS home screen) -->
+    <link rel="apple-touch-icon" href="../assets/img/favicon-apple.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <!--==============================
+      Google Fonts
+    ============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!--==============================
+        All CSS File
+    ============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=2.3">
+ <!--   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" /> -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.sju.edu.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.sju.edu.in/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Events",
+      "item": "https://www.sju.edu.in/services/ncc-events"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "NCC Armed Wings",
+      "item": "https://www.sju.edu.in/services/ncc-armed-wings-of-events"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <?php require_once '../header.php'; ?>
+    
+<!--BREADCRUMB-->
+ <section class="breadcrumb-hero text-white">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="breadcrumb-content text-center">
+          <h1 class="page-title mb-2">NCC Armed Wings</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item">
+                <a href="/" class="text-white text-decoration-none">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#" class="text-white text-decoration-none">Services</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="ncc-events.php" class="text-white text-decoration-none">Events</a>
+              </li>
+              <li class="breadcrumb-item active text-warning" aria-current="page">
+                 NCC Armed Wings
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="pt-5 pb-5 bg-light px-3">
+  <div class="container my-5">
+     <p>1 KAR ARMD SQN NCC TP-3 has been conducting events of social importance, environmental awareness, and youth empowerment for a long time. 
+     With its existence dating back to 1964, cadets and ANOs since then have garnered selfless contributions from the unit towards doing good for the society and the institution, itself.</p>
+ 
+                       <div class="row g-4 departmental-research-wrapper p-0 m-0">
+                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                             <a href="ncc-armed-wings-social-service.php" target="_blank">
+                           <div class="research-card">
+                             <i class="bi bi-journal-text"></i>
+                             <h4 class="">Social Service</h4>
+                           </div>
+                           </a>
+                         </div>
+                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                             <a href="ncc-armed-wings-adventure-activities.php" target="_blank">
+                           <div class="research-card">
+                             <i class="bi bi-journal-text"></i>
+                             <h4>Adventure Activities</h4>
+                           </div>
+                            </a>
+                         </div>
+                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                             <a href="ncc-armed-wings-regular-activities.php" target="_blank">
+                           <div class="research-card">
+                             <i class="bi bi-journal-text"></i>
+                             <h4>Regular Activities</h4>
+                           </div>
+                            </a>
+                         </div> 
+                       </div> 
+  </div>
+</section>
+  <!-- Footer injected -->
+<?php require_once '../footer.php'; ?>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

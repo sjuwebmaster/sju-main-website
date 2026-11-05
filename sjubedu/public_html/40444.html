@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | St Joseph's University</title>
+    <link rel="icon" type="image/webp" href="https://sju.edu.in/images/logo.webp">
+    
+    <style>
+        :root {
+            --sju-blue: #004a99;
+            --sju-dark: #002d5e;
+            --bg-gray: #f4f7f9;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: #333;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 60px 40px;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            border-top: 8px solid var(--sju-blue);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 64px;
+            color: var(--sju-dark);
+            margin: 0;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: var(--sju-blue);
+            margin: 10px 0 20px 0;
+        }
+
+        .divider {
+            height: 2px;
+            width: 60px;
+            background: var(--sju-blue);
+            margin: 20px auto;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background: #fff5f5;
+            border: 1px dashed #e53e3e;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #c53030;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--sju-blue);
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--sju-dark);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>\<!---
+
+    <div class="container">
+        <img src="https://sju.edu.in/images/logo.webp" alt="SJU Logo" class="logo">
+        
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <div class="divider"></div>
+        
+        <p>The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+
+        <div class="info-box">
+            Error: HTTP 404 - File Not Found
+        </div>
+
+        <a href="/" class="btn">Return to Homepage</a>
+
+        <div class="footer">
+            &copy; 2026 St Joseph's University. <br>
+            If you believe this is a technical error, please contact IT Support.
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+# 4. ULTIMATE SECURITY HEADERS (MARKETING & REPORTING READY)
+
+# This policy allows:
+
+    # 1. GTM/GA4/UTM: googletagmanager, google-analytics, doubleclick
+
+    # 2. Meta Pixel: connect.facebook.net, facebook.com
+
+    # 3. WhatsApp: whatsapp.com, static.whatsapp.net
+
+    # 4. Iframes: climateclock.world, worldemissions.io, google.com
+
+    # 5. Icons: jsdelivr, fontawesome
+
+<IfModule mod_headers.c>
+
+    # LIVE CSP: Allows your tools AND reports violations to /Test/csp-report.php
+
+    Header always set Content-Security-Policy "upgrade-insecure-requests; frame-ancestors 'self' https://sjub.edu.in; default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://connect.facebook.net https://*.whatsapp.com https://static.whatsapp.net https://*.jsdelivr.net https://*.fontawesome.com https://climateclock.world https://*.soundcloud.com https://*.sndcdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.jsdelivr.net https://*.fontawesome.com https://climateclock.world https://*.soundcloud.com https://*.sndcdn.com; img-src 'self' data: blob: https: https://*.google-analytics.com https://*.googletagmanager.com https://*.facebook.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.sndcdn.com; font-src 'self' data: https://fonts.gstatic.com https://*.jsdelivr.net https://*.fontawesome.com https://cdnjs.cloudflare.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.facebook.com https://worldemissions.io https://climateclock.world https://*.whatsapp.com https://*.soundcloud.com; frame-src 'self' https://*.google.com https://worldemissions.io https://climateclock.world https://*.facebook.com https://web.whatsapp.com https://w.soundcloud.com; object-src 'none'; base-uri 'self'; form-action 'self' https:; report-uri /Test/csp-report.php;"
+
+    # --- TRANSPORT & PRIVACY ---
+
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    Header set X-Content-Type-Options "nosniff"
+
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    Header set X-XSS-Protection "1; mode=block"
+
+    
+
+    # Note: Report-Only header was removed to allow Android Screenshots. 
+
+    # Reporting is now handled by the main CSP line above.
+
+</IfModule> >

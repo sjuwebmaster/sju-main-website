@@ -1,0 +1,6 @@
+<?php
+// Auto-generated LIVE Popular Media Page for COMMUNICATION
+$DEPARTMENT_ID = "68";
+$DEPARTMENT_NAME = "COMMUNICATION";
+require_once __DIR__ . '/popular_media_live.php';
+?>

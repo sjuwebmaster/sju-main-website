@@ -1,0 +1,6 @@
+<?php
+// Auto-generated Publication Page for LANGUAGES
+$DEPARTMENT_ID = "103";
+$DEPARTMENT_NAME = "LANGUAGES";
+require_once __DIR__ . '/publication.php';
+?>

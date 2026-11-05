@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Mr_K_S_Shivakumar.webp" class="card-img-top" alt="Mr K S Shivakumar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NTg.php" class="text-decoration-none">Mr K S Shivakumar</a></h5>
+                        <p class="card-text text-muted small">Associate Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="NTg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_A_John_Paul.webp" class="card-img-top" alt="Dr A John Paul">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU0.php" class="text-decoration-none">Dr A John Paul</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTU0.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_Prathiba_R_D.webp" class="card-img-top" alt="Dr Prathiba R D">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg1.php" class="text-decoration-none">Dr Prathiba R D</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - HOD</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTg1.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_M_Jayashankar.webp" class="card-img-top" alt="Dr M Jayashankar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NjEz.php" class="text-decoration-none">Dr M Jayashankar</a></h5>
+                        <p class="card-text text-muted small">Associate Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="NjEz.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_Viyolla_Pavana_Mendonce.webp" class="card-img-top" alt="Dr Viyolla Pavana Mendonce">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MjYy.php" class="text-decoration-none">Dr Viyolla Pavana Mendonce</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - PG Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MjYy.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_Kavya_K.webp" class="card-img-top" alt="Dr Kavya K">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="NzY0.php" class="text-decoration-none">Dr Kavya K</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="NzY0.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_Samson_S.webp" class="card-img-top" alt="Dr Samson S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTA4MQ.php" class="text-decoration-none">Dr Samson S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTA4MQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_V_Varun_Rajan.webp" class="card-img-top" alt="Dr V Varun Rajan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI4MA.php" class="text-decoration-none">Dr V Varun Rajan</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR - NSS Program Officer</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTI4MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_Magesh_D.webp" class="card-img-top" alt="Dr Magesh D">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQxNA.php" class="text-decoration-none">Dr Magesh D</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - NSS Program Officer</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTQxNA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Ms_Rajini_S_V.webp" class="card-img-top" alt="Ms Rajini S V">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU2Ng.php" class="text-decoration-none">Ms Rajini S V</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTU2Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Life%20Science/Zoology/Dr_Sumita_Karan.webp" class="card-img-top" alt="Dr Sumita Karan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc0Mw.php" class="text-decoration-none">Dr Sumita Karan</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">ZOOLOGY</span></div>
+                        <a href="MTc0Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

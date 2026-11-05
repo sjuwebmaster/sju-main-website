@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Incident Report Builder & Exporter</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg: #f4f6f9;
+            --card: #ffffff;
+            --text: #2d3748;
+            --muted: #718096;
+            --primary: #3182ce;
+            --primary-hover: #2b6cb0;
+            --danger: #e53e3e;
+            --danger-bg: #fff5f5;
+            --border: #e2e8f0;
+            --success: #38a169;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 30px 15px;
+            line-height: 1.5;
+        }
+
+        .builder-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2.section-title {
+            margin-top: 0;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            color: #1a202c;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media(min-width: 768px) {
+            .form-grid { grid-template-columns: repeat(3, 1fr); }
+            .span-all { grid-column: span 3; }
+            .span-two { grid-column: span 2; }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 14px;
+            background: #fdfdfd;
+            color: var(--text);
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .data-row-inputs {
+            background: #f7fafc;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            align-items: center;
+        }
+
+        .data-row-inputs span {
+            font-weight: bold;
+            font-size: 13px;
+            color: var(--primary);
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover { background: var(--primary-hover); }
+
+        #reportOutput { display: none; }
+        
+        .alert-banner {
+            background-color: var(--danger-bg);
+            border: 1px solid #feb2b2;
+            border-left: 5px solid var(--danger);
+            color: #c53030;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        @media(min-width: 768px) { .report-grid { grid-template-columns: 2fr 1fr; } }
+
+        .metrics-list { list-style: none; padding: 0; margin: 0; }
+        .metrics-list li {
+            display: flex; justify-content: space-between;
+            padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px;
+        }
+
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: #f7fafc; padding: 12px; border-bottom: 2px solid var(--border); color: var(--muted); }
+        td { padding: 12px; border-bottom: 1px solid var(--border); }
+        
+        .badge { display: inline-block; padding: 2px 6px; font-size: 11px; font-weight: 700; border-radius: 4px; }
+        .bg-crit { background: #fed7d7; color: #9b2c2c; }
+        .bg-norm { background: #e2e8f0; color: #4a5568; }
+        
+        .chart-wrapper { position: relative; height: 320px; width: 100%; }
+        
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .export-btn { background: var(--success); padding: 12px 20px; font-size: 14px; }
+        .export-btn:hover { background: #2f855a; }
+        .secondary-btn { background: #4a5568; padding: 12px 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="builder-container">
+    
+    <div class="card" id="formContainer">
+        <h2 class="section-title">🛠️ Incident Metrics Form</h2>
+        <form id="incidentForm" onsubmit="generateReport(event)">
+            <div class="form-grid">
+                
+                <div class="form-group">
+                    <label>Hostname / IP Address</label>
+                    <input type="text" id="hostIp" value="52-66-18-34.cprapid.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Network / IP Threat Suspect</label>
+                    <select id="ipProblem">
+                        <option value="Under Active Investigation... 🔍">Under Active Investigation...</option>
+                        <option value="Malicious IP Traffic Flooding Connections">Malicious IP Traffic Flood</option>
+                        <option value="Abnormal Micro-Burst Content Delivery Hits">High Volume Concurrent Connections</option>
+                        <option value="Internal Scan Routine Resource Lockup">Internal Cron / Scan Job Loop</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>OS Architecture</label>
+                    <input type="text" id="osArch" value="Linux 4.18.0 (AlmaLinux 8)">
+                </div>
+
+                <div class="form-group">
+                    <label>Peak Memory Allocation Request (%commit)</label>
+                    <input type="text" id="peakMem" value="110.31" required>
+                </div>
+                <div class="form-group">
+                    <label>Total Server Downtime (Frozen Phase)</label>
+                    <input type="text" id="downTime" value="~8 Minutes" required>
+                </div>
+                <div class="form-group">
+                    <label>Restoration / OS Reboot Time</label>
+                    <input type="text" id="rebootTime" value="1 Min 6 Sec" required>
+                </div>
+
+                <div class="form-group span-all">
+                    <label>Buffer Capacity Drop Metric</label>
+                    <input type="text" id="buffDrop" value="-581,312 KB">
+                </div>
+
+                <div class="form-group span-all">
+                    <label style="font-size: 15px; color: var(--primary); margin-bottom: 5px;">📊 Historical Timeline Metrics (Chronological order in IST)</label>
+                    
+                    <div class="data-row-inputs">
+                        <span>Log Point 1:</span>
+                        <input type="text" id="t1" value="09:40 AM" required>
+                        <input type="number" step="0.01" id="m1" value="74.58" required>
+                        <input type="number" step="0.01" id="c1" value="1.06" required>
+                        <input type="text" id="p1" value="88.47%">
+                        <input type="text" id="v1" value="Normal Operation">
+                    </div>
+                    <div class="data-row-inputs">
+                        <span>Log Point 2:</span>
+                        <input type="text" id="t2" value="09:50 AM" required>
+                        <input type="number" step="0.01" id="m2" value="73.30" required>
+                        <input type="number" step="0.01" id="c2" value="0.90" required>
+                        <input type="text" id="p2" value="90.06%">
+                        <input type="text" id="v2" value="Memory Cling">
+                    </div>
+                    <div class="data-row-inputs">
+                        <span>Log Point 3:</span>
+                        <input type="text" id="t3" value="10:00 AM" required>
+                        <input type="number" step="0.01" id="m3" value="70.74" required>
+                        <input type="number" step="0.01" id="c3" value="0.63" required>
+                        <input type="text" id="p3" value="87.01%">
+                        <input type="text" id="v3" value="Stable Buffer">
+                    </div>
+                    <div class="data-row-inputs">
+                        <span>Log Point 4:</span>
+                        <input type="text" id="t4" value="10:10 AM" required>
+                        <input type="number" step="0.01" id="m4" value="69.83" required>
+                        <input type="number" step="0.01" id="c4" value="0.73" required>
+                        <input type="text" id="p4" value="88.02%">
+                        <input type="text" id="v4" value="Stable Load">
+                    </div>
+                    <div class="data-row-inputs">
+                        <span>Log Point 5:</span>
+                        <input type="text" id="t5" value="10:20 AM" required>
+                        <input type="number" step="0.01" id="m5" value="70.36" required>
+                        <input type="number" step="0.01" id="c5" value="0.52" required>
+                        <input type="text" id="p5" value="88.60%">
+                        <input type="text" id="v5" value="Load Shift Warning">
+                    </div>
+                    <div class="data-row-inputs" style="background: #fff5f5; border-color: #feb2b2;">
+                        <span>⚠️ Peak Point 6:</span>
+                        <input type="text" id="t6" value="10:30 AM" required>
+                        <input type="number" step="0.01" id="m6" value="110.31" required>
+                        <input type="number" step="0.01" id="c6" value="1.30" required>
+                        <input type="text" id="p6" value="88.64%">
+                        <input type="text" id="v6" value="RAM Exhaustion Freeze">
+                    </div>
+                </div>
+
+                <div class="form-group span-two">
+                    <label>Manual Reboot Executed Timestamp (IST)</label>
+                    <input type="text" id="rebootTs" value="10:38:07 AM" required>
+                </div>
+                <div class="form-group">
+                    <label>OS Recovery Complete Timestamp (IST)</label>
+                    <input type="text" id="restoreTs" value="10:39:13 AM" required>
+                </div>
+
+                <button type="submit" class="span-all">📊 Generate Report View</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="reportOutput">
+        <div class="card" id="printableReportArea">
+            <header>
+                <h1 style="margin:0 0 5px 0;">Server Incident Resource Analysis Report</h1>
+                <div class="meta-info">
+                    <strong>Host:</strong> <span id="outHost"></span> | <strong>OS Architecture:</strong> <span id="outArch"></span> | <strong>Timezone:</strong> Indian Standard Time (IST)
+                </div>
+            </header>
+
+            <div class="alert-banner">
+                <h3>🚨 Memory Starvation &amp; Manual Recovery Event (IST)</h3>
+                <p>System metrics show severe memory exhaustion peaking at <strong id="outPeakTime"></strong> with commit requirements reaching <strong id="outPeakMem"></strong>. The server was locked/unresponsive for roughly <span id="outDowntime"></span> until a <strong>manual restart</strong> was executed, resulting in full restoration within <span id="outReboot"></span>.</p>
+            </div>
+
+            <div class="report-grid">
+                <div class="card" style="box-shadow:none; border:1px solid var(--border); margin:0;">
+                    <div class="card-title">📉 RAM Exhaustion vs. Stable CPU Timeline (IST)</div>
+                    <div class="chart-wrapper">
+                        <canvas id="incidentChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card" style="box-shadow:none; border:1px solid var(--border); margin:0;">
+                    <div class="card-title">🔍 Quick Diagnostics</div>
+                    <ul class="metrics-list">
+                        <li><span class="metrics-label">Peak Memory Demand</span><span class="metrics-value" id="diagPeak" style="color:var(--danger)"></span></li>
+                        <li><span class="metrics-label">Total Downtime (Frozen)</span><span class="metrics-value" id="diagDown" style="color:var(--danger)"></span></li>
+                        <li><span class="metrics-label">Restoration Time (Reboot)</span><span class="metrics-value" id="diagReboot" style="color:var(--primary)"></span></li>
+                        <li><span class="metrics-label">Available Buffers Drop</span><span class="metrics-value" id="diagBuff" style="color:var(--danger)"></span></li>
+                        <li><span class="metrics-label">Primary IP/Root Suspect</span><span class="metrics-value" id="diagCause" style="font-style:italic;"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="box-shadow:none; border:1px solid var(--border); margin:0; margin-top:25px;">
+                <div class="card-title">📋 Converted System Activity Log Data (sar - Normalized to IST)</div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp (IST)</th>
+                                <th>CPU Activity Load</th>
+                                <th>Physical RAM %used</th>
+                                <th>Total Committed %mem</th>
+                                <th>Status Label</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="exportAsHtmlFile()" class="export-btn">📥 Download Generated Report (.html)</button>
+            <button onclick="window.print()" class="secondary-btn" style="background:#2b6cb0;">🖨️ Print / Save to PDF</button>
+            <button onclick="editForm()" class="secondary-btn">✏️ Modify Input Form</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let activeChart = null;
+    let globalChartConfigData = {};
+
+    function generateReport(e) {
+        e.preventDefault();
+
+        // Populate fields
+        document.getElementById('outHost').innerText = document.getElementById('hostIp').value;
+        document.getElementById('outArch').innerText = document.getElementById('osArch').value;
+        document.getElementById('outPeakTime').innerText = document.getElementById('t6').value;
+        document.getElementById('outPeakMem').innerText = document.getElementById('peakMem').value + '%';
+        document.getElementById('outDowntime').innerText = document.getElementById('downTime').value;
+        document.getElementById('outReboot').innerText = document.getElementById('rebootTime').value;
+
+        document.getElementById('diagPeak').innerText = document.getElementById('peakMem').value + '% (%commit)';
+        document.getElementById('diagDown').innerText = document.getElementById('downTime').value;
+        document.getElementById('diagReboot').innerText = document.getElementById('rebootTime').value;
+        document.getElementById('diagBuff').innerText = document.getElementById('buffDrop').value;
+        document.getElementById('diagCause').innerText = document.getElementById('ipProblem').value;
+
+        let tableHtml = '';
+        globalChartConfigData = { times: [], mems: [], cpus: [] };
+        
+        for(let i=1; i<=6; i++) {
+            let t = document.getElementById('t'+i).value;
+            let m = parseFloat(document.getElementById('m'+i).value);
+            let c = parseFloat(document.getElementById('c'+i).value);
+            let p = document.getElementById('p'+i).value;
+            let v = document.getElementById('v'+i).value;
+
+            globalChartConfigData.times.push(t);
+            globalChartConfigData.mems.push(m);
+            globalChartConfigData.cpus.push(c);
+
+            let isSpike = (i === 6) ? 'class="spike-row"' : '';
+            let badgeClass = (i === 6) ? 'badge bg-crit' : 'badge bg-norm';
+
+            tableHtml += `<tr ${isSpike}>
+                <td>${t}</td>
+                <td>${c}%</td>
+                <td>${p}</td>
+                <td>${m}%</td>
+                <td><span class="${badgeClass}">${v}</span></td>
+            </tr>`;
+        }
+
+        tableHtml += `<tr style="background:#fed7d7; font-style:italic; color:#9b2c2c;">
+            <td>${document.getElementById('rebootTs').value}</td>
+            <td>--</td><td>--</td><td>--</td>
+            <td><span class="badge bg-crit" style="background:#cbd5e0; color:#2d3748;">MANUAL REBOOT EXECUTED 🛠️</span></td>
+        </tr>`;
+        tableHtml += `<tr>
+            <td>${document.getElementById('restoreTs').value}</td>
+            <td>--</td><td>--</td><td>--</td>
+            <td><span class="badge" style="background:#c6f6d5; color:#22543d; text-transform:uppercase;">OS Restoration Complete</span></td>
+        </tr>`;
+
+        document.getElementById('tableBody').innerHTML = tableHtml;
+        document.getElementById('formContainer').style.display = 'none';
+        document.getElementById('reportOutput').style.display = 'block';
+
+        renderChart();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderChart() {
+        if (activeChart) { activeChart.destroy(); }
+        const ctx = document.getElementById('incidentChart').getContext('2d');
+        activeChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: globalChartConfigData.times,
+                datasets: [
+                    {
+                        label: 'Memory Requested Allocation (%commit)',
+                        data: globalChartConfigData.mems,
+                        borderColor: '#e53e3e',
+                        backgroundColor: 'rgba(229, 62, 62, 0.05)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#e53e3e',
+                        fill: true, yAxisID: 'y'
+                    },
+                    {
+                        label: 'Processor Activity Load (%user)',
+                        data: globalChartConfigData.cpus,
+                        borderColor: '#3182ce',
+                        backgroundColor: 'transparent',
+                        borderWidth: 2, borderDash: [5, 5],
+                        pointBackgroundColor: '#3182ce',
+                        fill: false, yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Memory Allocation %', color: '#e53e3e' } },
+                    y1: { type: 'linear', display: true, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'CPU Computing Load %', color: '#3182ce' } }
+                }
+            }
+        });
+    }
+
+    function editForm() {
+        document.getElementById('formContainer').style.display = 'block';
+        document.getElementById('reportOutput').style.display = 'none';
+    }
+
+    function exportAsHtmlFile() {
+        // Capture inner HTML content layout
+        const innerReportHtml = document.getElementById('printableReportArea').innerHTML;
+        
+        // Assemble independent static HTML bundle document strings
+        const fullOutputDocument = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Incident Resource Analysis Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"><\/script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f4f6f9; color: #2d3748; padding: 20px; }
+        .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); padding: 25px; margin-bottom: 25px; }
+        header { border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 25px; }
+        .meta-info { color: #718096; font-size: 14px; }
+        .alert-banner { background: #fff5f5; border: 1px solid #feb2b2; border-left: 5px solid #e53e3e; color: #c53030; padding: 15px; border-radius: 6px; margin-bottom: 25px; }
+        .report-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        @media(min-width: 768px) { .report-grid { grid-template-columns: 2fr 1fr; } }
+        .metrics-list { list-style: none; padding: 0; margin: 0; }
+        .metrics-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #edf2f7; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 15px; }
+        th { background: #f7fafc; padding: 12px; border-bottom: 2px solid #e2e8f0; color: #718096; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #edf2f7; }
+        .spike-row { background-color: #fff5f5 !important; font-weight: bold; color: #e53e3e; }
+        .badge { display: inline-block; padding: 2px 6px; font-size: 11px; font-weight: 700; border-radius: 4px; text-transform: uppercase; }
+        .bg-crit { background: #fed7d7; color: #9b2c2c; }
+        .bg-norm { background: #e2e8f0; color: #4a5568; }
+        .chart-wrapper { position: relative; height: 320px; width: 100%; }
+        .card-title { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div style="max-width: 1100px; margin: 0 auto;">
+        ${innerReportHtml}
+    </div>
+    <script>
+        // Automatic chart initialization engine inside downloaded report
+        const ctx = document.getElementById('incidentChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ${JSON.stringify(globalChartConfigData.times)},
+                datasets: [
+                    {
+                        label: 'Memory Requested Allocation (%commit)',
+                        data: ${JSON.stringify(globalChartConfigData.mems)},
+                        borderColor: '#e53e3e', backgroundColor: 'rgba(229, 62, 62, 0.05)', borderWidth: 3, pointBackgroundColor: '#e53e3e', fill: true, yAxisID: 'y'
+                    },
+                    {
+                        label: 'Processor Activity Load (%user)',
+                        data: ${JSON.stringify(globalChartConfigData.cpus)},
+                        borderColor: '#3182ce', backgroundColor: 'transparent', borderWidth: 2, borderDash: [5, 5], pointBackgroundColor: '#3182ce', fill: false, yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                scales: {
+                    y: { type: 'linear', display: true, position: 'left' },
+                    y1: { type: 'linear', display: true, position: 'right', grid: { drawOnChartArea: false } }
+                }
+            }
+        });
+    <\/script>
+</body>
+</html>`;
+
+        // Execute background file attachment streaming download event
+        const textBlob = new Blob([fullOutputDocument], { type: 'text/html' });
+        const downloadLink = document.createElement('a');
+        downloadLink.download = `server_incident_report_${document.getElementById('t6').value.replace(/[: ]/g, '_')}.html`;
+        downloadLink.href = window.URL.createObjectURL(textBlob);
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+</script>
+
+</body>
+</html>

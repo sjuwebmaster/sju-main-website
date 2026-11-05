@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Mr_Vinay_BS.webp" class="card-img-top" alt="VINAY BS">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTY3.php" class="text-decoration-none">VINAY BS</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="OTY3.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Sr_Saly_Joseph.webp" class="card-img-top" alt="Sr. Saly Joseph">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTE5MA.php" class="text-decoration-none">Sr. Saly Joseph</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="MTE5MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Ms_Drishti_Rakhra.webp" class="card-img-top" alt="Drishti Rakhra">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="ODE0.php" class="text-decoration-none">Drishti Rakhra</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="ODE0.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Amritha_K_R.webp" class="card-img-top" alt="Amritha K R">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQxOA.php" class="text-decoration-none">Amritha K R</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="MTQxOA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Srutheesh_S.webp" class="card-img-top" alt="Srutheesh S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgwNQ.php" class="text-decoration-none">Srutheesh S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="MTgwNQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Ritu_Raveendran.webp" class="card-img-top" alt="Ritu Raveendran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgwMg.php" class="text-decoration-none">Ritu Raveendran</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="MTgwMg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Ms_Kiran_Sharma.webp" class="card-img-top" alt="Kiran Sharma">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgyMA.php" class="text-decoration-none">Kiran Sharma</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="MTgyMA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Mr_Pranav_V_S.webp" class="card-img-top" alt="Pranav V S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY5NQ.php" class="text-decoration-none">Pranav V S</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">JOURNALISM</span></div>
+                        <a href="MTY5NQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<?php
+$DEPARTMENT_ID = "119";
+$DEPARTMENT_NAME = "INTERNATIONAL RELATIONS PEACE AND PUBLIC POLICY";
+require_once '../patent.php';
+?>

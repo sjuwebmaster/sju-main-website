@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Dr_Nisha_Menzies_Rao.webp" class="card-img-top" alt="Nisha Menzies Rao">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTk5.php" class="text-decoration-none">Nisha Menzies Rao</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - HOD</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTk5.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Dr_Maria_Wajid.webp" class="card-img-top" alt="Maria Wajid">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI3OQ.php" class="text-decoration-none">Maria Wajid</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor - PG Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTI3OQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Dr_Neeta_Gerosa_Pereira.webp" class="card-img-top" alt="NEETA GEROSA PEREIRA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="Njg2.php" class="text-decoration-none">NEETA GEROSA PEREIRA</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="Njg2.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/+Dr__Anaurene_Roy.webp" class="card-img-top" alt="Anaurene Roy">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTA2MQ.php" class="text-decoration-none">Anaurene Roy</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTA2MQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/grace.jpg" class="card-img-top" alt="Grace Maria Jochan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTE2Ng.php" class="text-decoration-none">Grace Maria Jochan</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTE2Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Neha_Jha.webp" class="card-img-top" alt="Neha Jha">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI0OA.php" class="text-decoration-none">Neha Jha</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTI0OA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Dr_Stephen_Babu.webp" class="card-img-top" alt="Stephen Babu">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI3Ng.php" class="text-decoration-none">Stephen Babu</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTI3Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Ryan_Peter.webp" class="card-img-top" alt="Ryan Peter">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI5Ng.php" class="text-decoration-none">Ryan Peter</a></h5>
+                        <p class="card-text text-muted small">Counselling Psychologist</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTI5Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Dr_Anila_M_M.webp" class="card-img-top" alt="Anila M M">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQxMQ.php" class="text-decoration-none">Anila M M</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTQxMQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Dr_Safeya_Makhmur.webp" class="card-img-top" alt="Safeya Makhmur">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQxMw.php" class="text-decoration-none">Safeya Makhmur</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTQxMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Aadithya_R_Nath.webp" class="card-img-top" alt="Aadithya R Nath">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU2MA.php" class="text-decoration-none">Aadithya R Nath</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTU2MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Sonia_Patwardhan.webp" class="card-img-top" alt="Sonia Patwardhan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU3MA.php" class="text-decoration-none">Sonia Patwardhan</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTU3MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Kodhai_B_Narayanan.webp" class="card-img-top" alt="Kodhai B Narayanan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU3Mg.php" class="text-decoration-none">Ms Kodhai B Narayanan</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTU3Mg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Janani_Nagarajan.webp" class="card-img-top" alt="JANANI NAGARAJAN">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY1Mw.php" class="text-decoration-none">JANANI NAGARAJAN</a></h5>
+                        <p class="card-text text-muted small">ASSISTANT PROFESSOR</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTY1Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Keerthana_C_J.webp" class="card-img-top" alt="KEERTHANA C J">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY1Ng.php" class="text-decoration-none">KEERTHANA C J</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTY1Ng.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Estelle_Sheena_Dsouza.webp" class="card-img-top" alt="ESTELLE SHEENA D'SOUZA">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTY2Mg.php" class="text-decoration-none">ESTELLE SHEENA D'SOUZA</a></h5>
+                        <p class="card-text text-muted small">Counselling Psychologist</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTY2Mg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Muskan_Mehta.webp" class="card-img-top" alt="Muskan Mehta">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTcwMQ.php" class="text-decoration-none">Muskan Mehta</a></h5>
+                        <p class="card-text text-muted small">Counselling Psychologist</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTcwMQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Kishore_S.webp" class="card-img-top" alt="Kishore S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc0NA.php" class="text-decoration-none">Mr Kishore S</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc0NA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Akshara.webp" class="card-img-top" alt="Akshara">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc2Nw.php" class="text-decoration-none">Ms Akshara</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc2Nw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Vishanth_Anton_Menezes.webp" class="card-img-top" alt="Vishanth Anton Menezes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc4Nw.php" class="text-decoration-none">Vishanth Anton Menezes</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc4Nw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Sahiti_Gavarikar.webp" class="card-img-top" alt="Sahiti Gavarikar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc5Mg.php" class="text-decoration-none">Sahiti Gavarikar</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc5Mg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_K_M_Swathi.webp" class="card-img-top" alt="K M Swathi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc5Mw.php" class="text-decoration-none">K M Swathi</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc5Mw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Muskaan_Jain.webp" class="card-img-top" alt="Muskaan Jain">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc5OA.php" class="text-decoration-none">Muskaan Jain</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc5OA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Disha_Ramesh_Kalke.webp" class="card-img-top" alt="Disha Ramesh Kalke">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgwMQ.php" class="text-decoration-none">Disha Ramesh Kalke</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTgwMQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Joyson_John_Barboza.webp" class="card-img-top" alt="Joyson John Barboza">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTc5MQ.php" class="text-decoration-none">Joyson John Barboza</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTc5MQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Dakshina_U_Kanthy.webp" class="card-img-top" alt="Dakshina U Kanthy">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg0MA.php" class="text-decoration-none">Dakshina U Kanthy</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTg0MA.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Ishika_Jain.webp" class="card-img-top" alt="Ishika Jain">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTg0MQ.php" class="text-decoration-none">Ishika Jain</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTg0MQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Vishanth_Anton_Menezes.webp" class="card-img-top" alt="Fr Cyril D Mello S J">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTU0Mg.php" class="text-decoration-none">Fr Cyril D Mello S J</a></h5>
+                        <p class="card-text text-muted small">Coordinator</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTU0Mg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Ms_Alisha_Ansari_C.webp" class="card-img-top" alt="Alisha C Ansari">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTA2NQ.php" class="text-decoration-none">Alisha C Ansari</a></h5>
+                        <p class="card-text text-muted small">Teaching Assistant</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTA2NQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/Humanities/Psychology+and+Counselling/Mr_Reghunath_Prakash.webp" class="card-img-top" alt="Reghunath P">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTI0OQ.php" class="text-decoration-none">Reghunath P</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">PSYCHOLOGY</span></div>
+                        <a href="MTI0OQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

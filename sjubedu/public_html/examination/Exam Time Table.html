@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJU Exam Time Table</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 40px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #003366; font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* Search Bar Styles */
+        .search-wrapper {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        #searchBar {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border-radius: 30px;
+            border: 2px solid #ddd;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        #searchBar:focus {
+            border-color: #003366;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card-grid { display: flex; flex-direction: column; gap: 15px; }
+
+        .card {
+            background: white; border-radius: 12px; padding: 20px;
+            display: flex; align-items: center; justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 6px solid #003366;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+
+        .card-icon { width: 40px; height: 40px; fill: #d32f2f; flex-shrink: 0; margin-right: 20px; }
+        .card-content { flex-grow: 1; margin-right: 20px; }
+        .file-title { font-size: 1.05rem; font-weight: 600; margin: 0; color: #2c3e50; line-height: 1.4; }
+
+        .download-btn {
+            background-color: #003366; color: white; text-decoration: none;
+            padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 0.9rem;
+            transition: background 0.3s; white-space: nowrap;
+        }
+        .download-btn:hover { background-color: #00509e; }
+
+        @media (max-width: 600px) {
+            .card { flex-direction: column; text-align: center; gap: 15px; }
+            .card-icon { margin-right: 0; }
+            .card-content { margin-right: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Examination Time Table</h1>
+            <p>St. Joseph's University Data Portal</p>
+        </div>
+
+        <div class="search-wrapper">
+            <input type="text" id="searchBar" placeholder="Search for timetable (e.g., 'Convocation', 'Result', 'Timetable')..." onkeyup="searchNotices()">
+        </div>
+
+        <div class="card-grid" id="cardGrid">
+
+        <div class="card" data-name="even semester supplementary timetable for_nep and non nep batch-april 2026 ">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Even Semester Supplementary Timetable For_NEP and NON NEP Batch-April 2026 </p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/Even+Semester+Supplementary+Timetable+For_NEP+and+NON+NEP+Batch-April+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+
+        <div class="card" data-name="honours end semester examination timetable april 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Honours End Semester Examination Timetable April 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/Honours+End+Semester+Examination+Timetable+April+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="pg end semester examination timetable april 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG End Semester Examination Timetable April 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/PG+End+Semester+Examination+Timetable+April+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="ug end semester examination timetable april 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG End Semester Examination Timetable April 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/UG+End+Semester+Examination+Timetable+April+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="notice - timetable for makeup and ca improvement examination – march 2026 (batches 2018–2021)">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">NOTICE - Timetable for Makeup and CA Improvement Examination – March 2026 (Batches 2018–2021)</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/NOTICE+-+Timetable+for+Makeup+and+CA+Improvement+Examination+%E2%80%93+March+2026+(Batches+2018%E2%80%932021).pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="ug makeup and ca improvement examination timetable_march 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Makeup and CA Improvement Examination Timetable_March 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/UG+Makeup+and+CA+Improvement+Examination+Timetable_March+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="pg makeup and ca improvement examination timetable_march 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Makeup and CA Improvement Examination Timetable_March 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/PG+Makeup+and+CA+Improvement+Examination+Timetable_March+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="honours programme_ makeup and ca improvement examination timetable_march 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Honours Programme_ Makeup and CA Improvement Examination Timetable_March 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/Honours+Programme_+Makeup+and+CA+Improvement+Examination+Timetable_March+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+            
+     <div class="card" data-name="notice - makeup & ca improvement examination time table_ b.voc - voa & vof sixth semester_even semester - march 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">NOTICE - MAKEUP & CA IMPROVEMENT EXAMINATION TIME TABLE_ B.Voc – VOA & VOF SIXTH SEMESTER_EVEN SEMESTER – MARCH 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Test+Timetable/NOTICE+-+MAKEUP+%26+CA+IMPROVEMENT+EXAMINATION+TIME+TABLE_+B.Voc+%E2%80%93+VOA+%26+VOF+SIXTH+SEMESTER_EVEN+SEMESTER+%E2%80%93+MARCH+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="makeup examination & ca improvement examination for even semester – march 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">MAKEUP EXAMINATION & CA IMPROVEMENT EXAMINATION FOR EVEN SEMESTER – MARCH 2026</p>
+            </div>
+            <a href="https://sju.edu.in/uploads/userfiles/NOTICE%20-%20MAKEUP%20EXAMINATION%20&%20CA%20IMPROVEMENT%20EXAMINATION%20FOR%20EVEN%20SEMESTER%20%E2%80%93%20MARCH%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="honours midsemester examination timetable february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">HONOURS Midsemester Examination Timetable February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/HONOURS%20Midsemester%20Examination%20Timetable%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg midsemester examination timetable february 2026 - shift 3">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Midsemester Examination Timetable February 2026 - Shift 3</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Midsemester%20Examination%20Timetable%20February%202026%20-%20Shift%203.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg_midsemester examination timetable february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG_Midsemester Examination Timetable February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG_Midsemester%20Examination%20Timetable%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug_midsemester examination timetable_ february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG_MIDSEMESTER EXAMINATION TIMETABLE_ February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG_MIDSEMESTER%20EXAMINATION%20TIMETABLE_%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug midsemester examination timetable february 2026 -shift 3">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Midsemester Examination Timetable February 2026 -Shift 3</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Midsemester%20Examination%20Timetable%20February%202026%20-Shift%203.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="honours provisional midsemester examination timetable february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Honours Provisional Midsemester Examination Timetable February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Honours%20Provisional%20Midsemester%20Examination%20Timetable%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="shift 3 ug & pg provisonal midsemester examination timetable february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Shift 3 UG & PG Provisonal Midsemester Examination Timetable February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Shift%203%20UG%20%26%20PG%20Provisonal%20Midsemester%20Examination%20Timetable%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug provisonal midsemester examination timetable february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Provisonal Midsemester Examination Timetable February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Provisonal%20Midsemester%20Examination%20Timetable%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg provisonal midsemester examination timetable february 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Provisonal Midsemester Examination Timetable February 2026</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Provisonal%20Midsemester%20Examination%20Timetable%20February%202026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug end semester examination timetable october 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG End Semester Examination Timetable OCTOBER 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20End%20Semester%20Examination%20Timetable%20OCTOBER%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug supplementary (nep and non-nep) end semester examination timetable october 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Supplementary (NEP And NON-NEP) End Semester Examination Timetable October 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Supplementary%20(NEP%20And%20NON-NEP)%20End%20Semester%20Examination%20Timetable%20October%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="end semester examination timetable_ honours programme - october 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">END SEMESTER EXAMINATION TIMETABLE_ Honours Programme - October 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/END%20SEMESTER%20EXAMINATION%20TIMETABLE_%20Honours%20Programme%20-%20October%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg end semester examination timetable october 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG End Semester Examination Timetable October 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20End%20Semester%20Examination%20Timetable%20October%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug makeup and ca improvement examination september 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Makeup and CA Improvement Examination September 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Makeup%20and%20CA%20Improvement%20Examination%20September%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg makeup and ca improvement examination timetable september 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Makeup and CA Improvement Examination Timetable September 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Makeup%20and%20CA%20Improvement%20Examination%20Timetable%20September%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="honours programme makeup and ca improvement examination september 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">HONOURS Programme Makeup and CA Improvement Examination September 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/HONOURS%20Programme%20Makeup%20and%20CA%20Improvement%20Examination%20September%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg midsemseter examination timetable august 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Midsemseter Examination Timetable August 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Midsemseter%20Examination%20Timetable%20August%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="honours programme midsemseter examination timetable august 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Honours Programme Midsemseter Examination Timetable August 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Honours%20Programme%20Midsemseter%20Examination%20Timetable%20August%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug midsemester examination timetable august 2025 - shift 3">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Midsemester Examination Timetable August 2025 - Shift 3</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Midsemester%20Examination%20Timetable%20August%202025%20-%20Shift%203.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug midsemester examination timetable august 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Midsemester Examination Timetable August 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Midsemester%20Examination%20Timetable%20August%202025%20-%20Shift%203.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug special supplemenary examination timetable june 2025(1).pdf">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Special supplemenary examination Timetable June 2025(1).pdf</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Special%20supplemenary%20examination%20Timetable%20June%202025(1).pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg special supplemenary examination timetable june 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Special supplemenary examination Timetable June 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Special%20supplemenary%20examination%20Timetable%20June%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="2nd ,3rd and 4th ug special supplementary examination timetable - june 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">2nd ,3rd and 4th UG Special Supplementary Examination Timetable - June 2025</p>
+            </div>
+            <a href="3rd%20and%204th%20UG%20Special%20Supplementary%20Examination%20Timetable%20-%20June%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug even semester supplementary exam timetable april 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Even semester Supplementary Exam Timetable April 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Even%20semester%20Supplementary%20Exam%20Timetable%20April%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug 2nd, 4th & 6th end semester timetable april 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG 2nd, 4th & 6th End Semester Timetable April 2025</p>
+            </div>
+            <a href="%204th%20%26%206th%20End%20Semester%20Timetable%20April%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg 2nd & 4th end semester timetable april 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG 2nd & 4th End semester Timetable April 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%202nd%20%26%204th%20End%20semester%20Timetable%20April%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg midsemester examination timetable february 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Midsemester examination timetable February 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Midsemester%20examination%20timetable%20February%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug midsemester examination timetable february 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG Midsemester Examination Timetable February 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20Midsemester%20Examination%20Timetable%20February%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg end semester regular and supplementary examination time table oct 2024( conducted in nov 2024)">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG End semester regular and supplementary examination Time table OCT 2024( Conducted in Nov 2024)</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20End%20semester%20regular%20and%20supplementary%20examination%20Time%20table%20OCT%202024(%20Conducted%20in%20Nov%202024).pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug end semester regular and supplementary examination time table october 2024 (conducted in nov 2024).pdf">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG End semester regular and supplementary examination Time table October 2024 (conducted in Nov 2024).pdf</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20End%20semester%20regular%20and%20supplementary%20examination%20Time%20table%20OCT%202024(%20Conducted%20in%20Nov%202024).pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ii mca – time table for mid semester examinations – october 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">II MCA – Time Table for Mid Semester Examinations – October 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/II%20MCA%20–%20Time%20Table%20for%20Mid%20Semester%20Examinations%20–%20October%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="timetable for first semester nep batch ( supplementary ) -ug 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Timetable For First Semester NEP BATCH ( Supplementary ) -UG 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Timetable%20For%20First%20Semester%20NEP%20BATCH%20(%20Supplementary%20)%20-UG%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug - makeup ca improvement examination time table october 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG - Makeup CA Improvement Examination Time table October 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20-%20Makeup%20CA%20Improvement%20Examination%20Time%20table%20October%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="pg makeup ca improvement examination time table october 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">PG Makeup CA Improvement Examination Time Table October 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/PG%20Makeup%20CA%20Improvement%20Examination%20Time%20Table%20October%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="mca - makeup ca improvement examination time table october 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">MCA - Makeup CA Improvement Examination Time Table October 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/MCA%20-%20Makeup%20CA%20Improvement%20Examination%20Time%20Table%20October%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="midsemester examination september 2024 time table mca pg 1st semester">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Midsemester Examination September 2024 Time Table MCA PG 1st Semester</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Midsemester%20Examination%20September%202024%20Time%20Table%20MCA%20PG%201st%20Semester.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="midsemester examination september 2024 time table pg 1st 3rd semester shift 1 2 and 3">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Midsemester Examination September 2024 Time Table PG 1st 3rd Semester Shift 1 2 and 3</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Midsemester%20Examination%20September%202024%20Time%20Table%20PG%201st%203rd%20Semester%20Shift%201%202%20and%203.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="midsemester examination september 2024 time table ug 1st 3rd and 5th semester_shift 1 2 and 3">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Midsemester Examination September 2024 Time Table UG 1st 3rd and 5th Semester_shift 1 2 and 3</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Midsemester%20Examination%20September%202024%20Time%20Table%20UG%201st%203rd%20and%205th%20Semester_shift%201%202%20and%203.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="27 march 2024 open elective 4th ug (non-nep) even semester time table 2024.pdf">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">27 March 2024 open elective 4th UG (NON-NEP) Even semester time table 2024.pdf</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/27%20March%202024%20open%20elective%204th%20UG%20(NON-NEP)%20Even%20semester%20time%20table%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="27 march 2024 non nep ug even semester time table april 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">27 March 2024 NON NEP UG Even semester time table April 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/27%20March%202024%20NON%20NEP%20UG%20Even%20semester%20time%20table%20April%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="27 march 2024 pg 2nd & 4th even semester time table 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">27 March 2024 PG 2nd & 4th Even semester time table 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/27%20March%202024%20PG%202nd%20%26%204th%20Even%20semester%20time%20table%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="27 march 2024 – ug 2nd, 4th & 6th even semester time table 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">27 March 2024 – UG 2nd, 4th & 6th Even semester time table 2024</p>
+            </div>
+            <a href="%204th%20%26%206th%20Even%20semester%20time%20table%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="13 march 2024 – ug makeup ca improvement time table april 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">13 March 2024 – UG makeup CA Improvement Time Table April 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/13%20March%202024%20–%20UG%20makeup%20CA%20Improvement%20Time%20Table%20April%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="13 march 2024 – pg makeup ca improvement time table april 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">13 March 2024 – PG makeup CA Improvement Time Table April 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/13%20March%202024%20–%20PG%20makeup%20CA%20Improvement%20Time%20Table%20April%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="2 march 2024 mca – time table for end semester examinations – march 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">2 March 2024 MCA – Time Table for End Semester Examinations – March 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/2%20March%202024%20MCA%20–%20Time%20Table%20for%20End%20Semester%20Examinations%20–%20March%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="8 februrary 2024 pg 1st and 2nd shift mid sem march 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">8 Februrary 2024 PG 1st and 2nd shift Mid Sem March 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/8%20Februrary%202024%20PG%201st%20and%202nd%20shift%20Mid%20Sem%20March%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="8 februrary 2024 pg 3rd shift mid sem march 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">8 Februrary 2024 PG 3rd shift Mid Sem March 2024</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/8%20Februrary%202024%20PG%203rd%20shift%20Mid%20Sem%20March%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="8 februrary 2024 ug i, ii, iii shift mid sem timetable march 2024">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">8 Februrary 2024 UG I, II, III Shift Mid Sem Timetable March 2024</p>
+            </div>
+            <a href="%20III%20Shift%20Mid%20Sem%20Timetable%20March%202024.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="7 october 2023 semester examination time table for the non nep ug students">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">7 October 2023 Semester Examination Time Table For The Non NEP UG Students</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/7%20October%202023%20Semester%20Examination%20Time%20Table%20For%20The%20Non%20NEP%20UG%20Students.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="17 october 2023 end semester pg time table october 2023">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">17 October 2023 End semester PG Time Table October 2023</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/17%20October%202023%20End%20semester%20PG%20Time%20Table%20October%202023.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="17 october 2023 end semester ug time table october 2023">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">17 October 2023 End semester UG Time Table October 2023</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/17%20October%202023%20End%20semester%20UG%20Time%20Table%20October%202023.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="11 october 2023 5th semester non nep makeup examination timetable">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">11 October 2023 5th Semester non NEP Makeup Examination Timetable</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/11%20October%202023%205th%20Semester%20non%20NEP%20Makeup%20Examination%20Timetable.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="25 september 2023 makeup examination timetable">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">25 September 2023 Makeup Examination Timetable</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/25%20September%202023%20Makeup%20Examination%20Timetable.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="22 august 2023 mid semester examination first semester ( 1 & 2 shift) pg - september 2023">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">22 August 2023 Mid Semester Examination First Semester ( 1 & 2 Shift) PG - September 2023</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/22%20August%202023%20Mid%20Semester%20Examination%20First%20Semester%20(%201%20%26%202%20Shift)%20PG%20-%20September%202023.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="22 august 2023 mid semester examination first semester ( 1 & 2 shift) ug - september 2023">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">22 August 2023 Mid Semester Examination First Semester ( 1 & 2 Shift) UG - September 2023</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/22%20August%202023%20Mid%20Semester%20Examination%20First%20Semester%20(%201%20%26%202%20Shift)%20UG%20-%20September%202023.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug sem 4 - sse june 2023 time table">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG SEM 4 - SSE JUNE 2023 Time Table</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20SEM%204%20-%20SSE%20JUNE%202023%20Time%20Table.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug sem 3 - sse june 2023 time table">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG SEM 3 - SSE JUNE 2023 Time Table</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20SEM%203%20-%20SSE%20JUNE%202023%20Time%20Table.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug sem 1 - sse june 2023 time table">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG SEM 1 - SSE JUNE 2023 Time Table</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20SEM%201%20-%20SSE%20JUNE%202023%20Time%20Table.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="nep regular & supplementary exam timetable for even semesters ug and pg students">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">NEP Regular & Supplementary Exam Timetable for Even Semesters UG and PG Students</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/NEP%20Regular%20%26%20Supplementary%20Exam%20Timetable%20for%20Even%20Semesters%20UG%20and%20PG%20Students.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="non-nep regular & supplementary exam timetable for even semesters ug students">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Non-NEP Regular & Supplementary Exam Timetable for Even Semesters UG Students</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Non-NEP%20Regular%20%26%20Supplementary%20Exam%20Timetable%20for%20Even%20Semesters%20UG%20Students.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="ug open elective shift i & ii">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">UG OPEN ELECTIVE SHIFT I & II</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/UG%20OPEN%20ELECTIVE%20SHIFT%20I%20%26%20II.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="open elective - shift i and ii - 4th sem - midsemester examination - march 2023">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">OPEN ELECTIVE - SHIFT I AND II - 4TH SEM - MIDSEMESTER EXAMINATION - MARCH 2023</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/OPEN%20ELECTIVE%20-%20SHIFT%20I%20AND%20II%20-%204TH%20SEM%20-%20MIDSEMESTER%20EXAMINATION%20-%20MARCH%202023.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="open elective - shift 3 - midsemester examination - march 2023">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">OPEN ELECTIVE - SHIFT 3 - MIDSEMESTER EXAMINATION - MARCH 2023</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/OPEN%20ELECTIVE%20-%20SHIFT%203%20-%20MIDSEMESTER%20EXAMINATION%20-%20MARCH%202023.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="timetable - 6th sem makeup examination">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Timetable - 6th Sem Makeup Examination</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Timetable%20-%206th%20Sem%20Makeup%20Examination.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="timetable - 4th sem makeup ca improvement examination">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Timetable - 4th Sem Makeup CA improvement Examination</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Timetable%20-%204th%20Sem%20Makeup%20CA%20improvement%20Examination.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="timetable - 2nd sem ug makeup examination">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Timetable - 2nd Sem UG Makeup Examination</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Test%20Timetable/Timetable%20-%202nd%20Sem%20UG%20Makeup%20Examination.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        function searchNotices() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const cardName = cards[i].getAttribute('data-name');
+                if (cardName.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

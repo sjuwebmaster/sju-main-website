@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Faculty Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f4f4; }
+        .faculty-card { transition: transform 0.2s; }
+        .faculty-card:hover { transform: translateY(-5px); }
+        .faculty-card img { height: 300px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-dark">Faculty Directory</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search by name, designation or department...">
+                    <button class="btn btn-secondary shadow-sm" type="button" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="alert alert-info text-center" style="display: none;">
+            No faculty members found matching your search.
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Anisha_David.webp" class="card-img-top" alt="Anisha David">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTIyMw.php" class="text-decoration-none">Anisha David</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="MTIyMw.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Santosh_Jagadeeshan.webp" class="card-img-top" alt="Dr.Santosh Jagadeeshan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTc1.php" class="text-decoration-none">Dr.Santosh Jagadeeshan</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="OTc1.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Ms_Theresa_Karra.webp" class="card-img-top" alt="Theresa Karra">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTUyNQ.php" class="text-decoration-none">Theresa Karra</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="MTUyNQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Mohammed_Rafiqkhan_K.webp" class="card-img-top" alt="MOHAMMED RAFIQKHAN K">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgxOQ.php" class="text-decoration-none">MOHAMMED RAFIQKHAN K</a></h5>
+                        <p class="card-text text-muted small">Assistant Professor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="MTgxOQ.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_C_N_Rahul.webp" class="card-img-top" alt="C N Rahul">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTgyNg.php" class="text-decoration-none">C N Rahul</a></h5>
+                        <p class="card-text text-muted small">Assistant Profeessor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="MTgyNg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_Jincy_George.webp" class="card-img-top" alt="Jincy A George">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="MTQxMg.php" class="text-decoration-none">Jincy A George</a></h5>
+                        <p class="card-text text-muted small">Assistant Profeessor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="MTQxMg.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card faculty-card h-100 shadow-sm border-0">
+                    <img src="../images/Dr_N_Praveen_Kumar.webp" class="card-img-top" alt="Praveen Kumar Nagadesi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a href="OTE0.php" class="text-decoration-none">Praveen Kumar Nagadesi</a></h5>
+                        <p class="card-text text-muted small">Assistant Profeessor</p>
+                        <div class="mb-3"><span class="badge bg-secondary">BIOLOGY</span></div>
+                        <a href="OTE0.php" class="btn btn-sm btn-outline-success">[View Profile]</a>
+                    </div>
+                </div>
+            </div>        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterFaculty() {
+            const searchValue = searchInput.value.toLowerCase();
+            const facultyCols = document.querySelectorAll('.row.g-4 > div');
+            let visibleCount = 0;
+
+            facultyCols.forEach(col => {
+                const card = col.querySelector('.card');
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const designation = card.querySelector('.card-text').textContent.toLowerCase();
+                const department = card.querySelector('.badge').textContent.toLowerCase();
+
+                if (name.includes(searchValue) || designation.includes(searchValue) || department.includes(searchValue)) {
+                    col.style.display = '';
+                    visibleCount++;
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('keyup', filterFaculty);
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            searchInput.value = '';
+            filterFaculty();
+        });
+    </script>
+</body>
+</html>

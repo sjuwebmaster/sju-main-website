@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJU Exam Notices</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 40px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #003366; font-size: 2.5rem; margin-bottom: 10px; }
+        
+        /* Search Bar Styles */
+        .search-wrapper {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        #searchBar {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border-radius: 30px;
+            border: 2px solid #ddd;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        #searchBar:focus {
+            border-color: #003366;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card-grid { display: flex; flex-direction: column; gap: 15px; }
+        
+        .card { 
+            background: white; border-radius: 12px; padding: 20px; 
+            display: flex; align-items: center; justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 6px solid #003366;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        
+        .card-icon { width: 40px; height: 40px; fill: #d32f2f; flex-shrink: 0; margin-right: 20px; }
+        .card-content { flex-grow: 1; margin-right: 20px; }
+        .file-title { font-size: 1.05rem; font-weight: 600; margin: 0; color: #2c3e50; line-height: 1.4; }
+        
+        .download-btn { 
+            background-color: #003366; color: white; text-decoration: none; 
+            padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 0.9rem;
+            transition: background 0.3s; white-space: nowrap;
+        }
+        .download-btn:hover { background-color: #00509e; }
+
+        @media (max-width: 600px) {
+            .card { flex-direction: column; text-align: center; gap: 15px; }
+            .card-icon { margin-right: 0; }
+            .card-content { margin-right: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Examination Application Forms</h1>
+            <p>St Joseph's University Data Portal</p>
+        </div>
+
+        <div class="search-wrapper">
+            <input type="text" id="searchBar" placeholder="Search for application forms (e.g., 'Supplementary', 'Scribe', 'Additional Marks')..." onkeyup="searchNotices()">
+        </div>
+
+        <div class="card-grid" id="cardGrid">
+
+        <div class="card" data-name="hall ticket supplementary examination 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Hall ticket Supplementary Examination 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/Hall+ticket++Supplementary+Examination+2026+(1).pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="application form supplementary examination 2026">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Application form Supplementary Examination 2026</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/Application+form+Supplementary+Examination+2026.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+
+        <div class="card" data-name="supplementary application october 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Supplementary Application October 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Exam%20application%20forms/Supplementary%20Application%20October%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="supplementary hallticket october 2025">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Supplementary Hallticket October 2025</p>
+            </div>
+            <a href="https://sjudata.s3.amazonaws.com/Examinations/Exam%20application%20forms/Supplementary%20Hallticket%20October%202025.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="application for additional 5 marks">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Application for Additional 5 Marks</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+application+forms/Application+for+Additional+5+Marks.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        <div class="card" data-name="application form for scribe">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </div>
+            <div class="card-content">
+                <p class="file-title">Application Form for Scribe</p>
+            </div>
+            <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+application+forms/scribe+approval+form.pdf" target="_blank" class="download-btn">View Document</a>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        function searchNotices() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                const cardName = cards[i].getAttribute('data-name');
+                if (cardName.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

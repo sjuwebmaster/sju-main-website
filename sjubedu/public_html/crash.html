@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Incident Resource Analysis Report (IST Conversion)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --primary: #3182ce;
+            --danger-bg: #fff5f5;
+            --danger-border: #feb2b2;
+            --danger-text: #c53030;
+            --accent-spike: #e53e3e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            color: #1a202c;
+            font-size: 28px;
+        }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        @media(min-width: 768px) {
+            .grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-banner {
+            background-color: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            border-left: 5px solid var(--accent-spike);
+            color: var(--danger-text);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .alert-banner h3 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .alert-banner p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Table Styling */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f7fafc;
+            color: var(--text-muted);
+            font-weight: 600;
+            padding: 12px;
+            border-bottom: 2px solid #edf2f7;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        tr.spike-row {
+            background-color: #fff5f5 !important;
+            font-weight: bold;
+            color: var(--danger-text);
+        }
+
+        tr.crash-row {
+            background-color: #fed7d7 !important;
+            color: #9b2c2c;
+            font-style: italic;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .badge-danger {
+            background-color: #fed7d7;
+            color: #9b2c2c;
+        }
+
+        .badge-critical {
+            background-color: #e53e3e;
+            color: white;
+        }
+
+        .metrics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .metrics-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #edf2f7;
+            font-size: 14px;
+        }
+
+        .metrics-list li:last-child {
+            border: none;
+        }
+
+        .metrics-label {
+            color: var(--text-muted);
+        }
+
+        .metrics-value {
+            font-weight: 600;
+        }
+
+        .chart-container {
+            position: relative; 
+            height: 340px; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Server Incident Resource Analysis Report</h1>
+        <div class="meta-info">
+            <strong>Host:</strong> 52-66-18-34.cprapid.com | <strong>OS Architecture:</strong> Linux 4.18.0 (AlmaLinux 8) | <strong>Timezone Normalization:</strong> Indian Standard Time (IST)
+        </div>
+    </header>
+
+    <div class="alert-banner">
+        <h3>🚨 Memory Starvation &amp; Manual Recovery Event (IST)</h3>
+        <p>System metrics show severe memory exhaustion peaking at <strong>10:30:02 AM IST</strong> with commit requirements reaching <strong>110.31%</strong>. The server was locked/unresponsive for roughly 8 minutes until a <strong>manual restart</strong> was executed at <strong>10:38:07 AM IST</strong>, resulting in full restoration within 66 seconds.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">📉 RAM Exhaustion vs. Stable CPU Timeline (IST)</div>
+            <div class="chart-container">
+                <canvas id="incidentChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🔍 Quick Diagnostics</div>
+            <ul class="metrics-list">
+                <li>
+                    <span class="metrics-label">Baseline CPU Idle</span>
+                    <span class="metrics-value" style="color: #28a745;">97.96% (Healthy)</span>
+                </li>
+                <li>
+                    <span class="metrics-label">Peak Memory Demand</span>
+                    <span class="metrics-value" style="color: var(--accent-spike);">110.31% (%commit)</span>
+                </li>
+                <li>
+                    <span class="metrics-label">Total Downtime (Frozen)</span>
+                    <span class="metrics-value" style="color: var(--accent-spike);">~8 Minutes</span>
+                </li>
+                <li>
+                    <span class="metrics-label">Restoration Time (Reboot)</span>
+                    <span class="metrics-value" style="color: #3182ce;">1 Min 6 Sec</span>
+                </li>
+                <li>
+                    <span class="metrics-label">Incident Root Cause</span>
+                    <span class="metrics-value" style="color: #4a5568; font-style: italic;">Under Investigation... 🔍</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📋 Converted System Activity Log Data (sar - Normalized to IST)</div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp (IST)</th>
+                        <th>CPU %idle (Stability)</th>
+                        <th>Physical RAM %used</th>
+                        <th>Total Committed %mem</th>
+                        <th>Available Memory Capacity</th>
+                        <th>Incident Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:40:01 AM</td>
+                        <td>97.62%</td>
+                        <td>88.47%</td>
+                        <td>74.58%</td>
+                        <td>1,252,840 KB</td>
+                        <td><span class="badge" style="background:#e2e8f0; color:#4a5568;">Normal Operations</span></td>
+                    </tr>
+                    <tr>
+                        <td>09:50:01 AM</td>
+                        <td>96.77%</td>
+                        <td>90.06%</td>
+                        <td>73.30%</td>
+                        <td>1,278,628 KB</td>
+                        <td><span class="badge" style="background:#edf2f7; color:#4a5568;">Memory Clings</span></td>
+                    </tr>
+                    <tr>
+                        <td>10:00:01 AM</td>
+                        <td>98.24%</td>
+                        <td>87.01%</td>
+                        <td>70.74%</td>
+                        <td>1,338,672 KB</td>
+                        <td><span class="badge" style="background:#edf2f7; color:#4a5568;">Stable Buffer</span></td>
+                    </tr>
+                    <tr>
+                        <td>10:10:02 AM</td>
+                        <td>98.18%</td>
+                        <td>88.02%</td>
+                        <td>69.83%</td>
+                        <td>1,340,124 KB</td>
+                        <td><span class="badge" style="background:#edf2f7; color:#4a5568;">Stable Buffer</span></td>
+                    </tr>
+                    <tr>
+                        <td>10:20:01 AM</td>
+                        <td>98.53%</td>
+                        <td>88.60%</td>
+                        <td>70.36%</td>
+                        <td>1,337,156 KB</td>
+                        <td><span class="badge" style="background:#edf2f7; color:#4a5568;">Load Shift Warning</span></td>
+                    </tr>
+                    <tr class="spike-row">
+                        <td>10:30:02 AM</td>
+                        <td>96.99%</td>
+                        <td>88.64%</td>
+                        <td>110.31%</td>
+                        <td>759,224 KB</td>
+                        <td><span class="badge badge-critical">RAM Commit Spike (Server Freezes) 🚨</span></td>
+                    </tr>
+                    <tr class="crash-row">
+                        <td>10:38:07 AM</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td><span class="badge badge-danger" style="background: #cbd5e0; color: #2d3748;">MANUAL REBOOT EXECUTED 🛠️</span></td>
+                    </tr>
+                    <tr>
+                        <td>10:39:13 AM</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td><span class="badge" style="background: #c6f6d5; color: #22543d;">OS RESTORATION COMPLETE</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('incidentChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['09:40 AM', '09:50 AM', '10:00 AM', '10:10 AM', '10:20 AM', '10:30 AM'],
+            datasets: [
+                {
+                    label: 'Memory Requested Allocation (%commit)',
+                    data: [74.58, 73.30, 70.74, 69.83, 70.36, 110.31],
+                    borderColor: '#e53e3e',
+                    backgroundColor: 'rgba(229, 62, 62, 0.05)',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#e53e3e',
+                    pointRadius: [4, 4, 4, 4, 4, 8],
+                    fill: true,
+                    yAxisID: 'y'
+                },
+                {
+                    label: 'Processor Activity Load (%user)',
+                    data: [1.06, 0.90, 0.63, 0.73, 0.52, 1.30],
+                    borderColor: '#3182ce',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    borderDash: [5, 5],
+                    pointBackgroundColor: '#3182ce',
+                    fill: false,
+                    yAxisID: 'y1'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Memory Allocation %',
+                        color: '#e53e3e',
+                        font: { weight: 'bold' }
+                    },
+                    suggestedMin: 50,
+                    suggestedMax: 120
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    grid: { drawOnChartArea: false },
+                    title: {
+                        display: true,
+                        text: 'CPU Computing Load %',
+                        color: '#3182ce',
+                        font: { weight: 'bold' }
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 5
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
