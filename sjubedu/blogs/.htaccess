@@ -1,0 +1,74 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# blogs.sju.edu.in — Apache configuration
+# Optimised for Cloudflare CDN: reduces origin hits and AWS EC2/S3 costs
+# ─────────────────────────────────────────────────────────────────────────────
+
+Options -Indexes
+
+# ── Security headers ──────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options  "nosniff"
+    Header always set X-Frame-Options          "SAMEORIGIN"
+    Header always set Referrer-Policy          "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy       "geolocation=(), camera=(), microphone=()"
+</IfModule>
+
+# ── Uploaded blog images: 1 year at Cloudflare edge + browser ────────────────
+# Immutable means Cloudflare will NOT revalidate until TTL expires.
+# Update filenames (they are random hex) when content changes — already done.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|woff2|woff|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, s-maxage=31536000, immutable"
+        Header unset Pragma
+        Header unset Expires
+    </FilesMatch>
+</IfModule>
+
+# ── Blog HTML pages (public, dynamic) ────────────────────────────────────────
+# s-maxage=3600  → Cloudflare caches each page for 1 hour
+# max-age=0      → Browser always revalidates (gets content from Cloudflare, not EC2)
+# stale-while-revalidate=60 → Cloudflare serves stale while refreshing in background
+<IfModule mod_headers.c>
+    <FilesMatch "^(index|post)\.php$">
+        Header set Cache-Control "public, s-maxage=3600, max-age=0, stale-while-revalidate=60"
+        Header set Vary "Accept-Encoding"
+    </FilesMatch>
+</IfModule>
+
+# ── Sitemap and llms.txt: cache 24 hours at edge ─────────────────────────────
+<IfModule mod_headers.c>
+    <FilesMatch "^(sitemap\.php|llms\.txt|sitemap\.xml)$">
+        Header set Cache-Control "public, s-maxage=86400, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
+# ── like_handler.php: never cache (POST endpoint) ────────────────────────────
+<IfModule mod_headers.c>
+    <Files "like_handler.php">
+        Header set Cache-Control "no-store, no-cache, must-revalidate"
+        Header set Pragma "no-cache"
+    </Files>
+</IfModule>
+
+# ── Gzip compression (reduces bytes sent from EC2) ───────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ── Block direct access to PHP config files ───────────────────────────────────
+<FilesMatch "^(admin_config|auth)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ── Block dot-files ───────────────────────────────────────────────────────────
+<FilesMatch "^\.(ht|git|env)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ── PHP error display off in production ───────────────────────────────────────
+php_flag display_errors off
+php_flag log_errors on

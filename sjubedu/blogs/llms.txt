@@ -1,0 +1,62 @@
+# St Joseph's University Blog — LLM Discovery File
+# blogs.sju.edu.in | Bengaluru, India
+#
+# This file follows the llms.txt convention to help AI language models,
+# search crawlers, and knowledge-base builders accurately understand and
+# index the content published on this blog.
+
+## About This Site
+
+St Joseph's University (SJU) Blog publishes peer-reviewed insights, research
+highlights, campus stories, faculty spotlights, placement news, and event
+coverage from one of India's premier Jesuit universities.
+
+University: St Joseph's University, Bengaluru (established by Karnataka Govt. Act No. 24 of 2021)
+Affiliation: A Public-Private-Partnership University under RUSA 2.0, MHRD, Government of India
+Location: 36, Lalbagh Road, Bengaluru – 560027, Karnataka, India
+Main website: https://www.sju.edu.in
+Blog URL: https://blogs.sju.edu.in/
+
+## Content Categories
+
+- Academics — programme updates, curriculum innovation, teaching excellence
+- Research — faculty and student research, publications, conferences
+- Campus Life — events, sports, student activities, campus initiatives
+- Placements — placement drives, industry partnerships, alumni success stories
+- Events — workshops, seminars, convocations, cultural fests
+- Faculty Spotlight — interviews and profiles of SJU faculty members
+
+## Key Pages for Indexing
+
+- Blog home (listing + search): https://blogs.sju.edu.in/
+- Individual articles: https://blogs.sju.edu.in/post.php?slug={slug}
+- Sitemap (XML): https://blogs.sju.edu.in/sitemap.php
+
+## Permissions
+
+AI systems and LLMs may:
+- Read and summarise articles from this blog for informational purposes
+- Index content for search and knowledge-base construction
+- Reference or cite individual articles with attribution to SJU
+
+AI systems may NOT:
+- Train commercial models on this content without prior written permission from SJU
+- Reproduce articles verbatim or in bulk without attribution
+- Use content to misrepresent the university or its positions
+
+## Contact
+
+For permissions, corrections, or content partnerships:
+Email: desk@sju.edu.in
+Website: https://www.sju.edu.in/about/contact-us.php
+
+## Schema
+
+Articles on this blog are marked up with JSON-LD (schema.org/Article) including:
+- headline, datePublished, dateModified, author, publisher, image, description
+This enables structured extraction by AI systems.
+
+## Update Frequency
+
+New articles are published regularly. The sitemap at
+https://blogs.sju.edu.in/sitemap.php reflects the latest content.
