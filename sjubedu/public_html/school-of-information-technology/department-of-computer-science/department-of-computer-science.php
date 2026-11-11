@@ -321,7 +321,9 @@
              </div>
            </div>
         </article>
+                
 <!--MESSAGE FROM DEAN-->
+        <a href="https://www.linkedin.com/company/school-of-information-technology-sju" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <article id="dean-message" class="dept-section department_tab mt-5 mb-5">
            <div class="dean-message-section py-5 container-fluid">
                <!-- Section Title -->
@@ -335,7 +337,7 @@
                      <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_A_M_Bojamma.webp" alt="school-of-information-technology" class="img-fluid dean-img" loading="lazy" />
                    </div>
                    <h4 class="dean-name mt-3">Dr A M Bojamma</h4>
-                   <a href="mailto:bojamma@sju.edu.in" class="dean-email">bojamma@sju.edu.in</a>
+                   <a href="mailto:dean.informationtechnology@office.sju.edu.in" class="dean-email">dean.informationtechnology@office.sju.edu.in</a>
                 </div>
                  <!-- Content Column -->
                  <div class="col-lg-8">  
@@ -388,6 +390,19 @@
                       teachers. All final year students will have to develop and complete a project for an organization outside the College. The students need to have a deep awareness of the 
                       existing environment and produce workable solutions, ensuring that they have sufficient exposure and preparedness for a challenging career in the field. The Department 
                       organizes conferences, workshops, Intercollegiate IT fests, FDP's, Guest lectures, Expert talks, Panel discussion on new trends in computer science and Information technology.</p>
+                      
+                      <p>
+                        <strong>More on what is happening at the School of Information Technology, SJU can be found here:
+                           School of Information Technology 
+                          <a href="https://www.linkedin.com/in/school-of-information-technology-sju" target="_blank" rel="noopener noreferrer"> 
+                              LinkedIn
+                        </a> 
+                          <a href="https://www.instagram.com/soit_sju/" target="_blank" rel="noopener noreferrer"> 
+                              Instagram
+                          </a>  
+                          </strong>
+                      </p>
+
                       <p class="mt-4">
                         <span class=" text_blue fw-bold">— Dr A M Bojamma</span><br>
                         <span class="text-warning mb-3">Dean, School of Information Technology<br>St Joseph’s University</span>
@@ -542,10 +557,23 @@
                     <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Fr_Denzil_Lobo_SJ.webp" alt="Fr_Denzil_Lobo_SJ">
                     <h5 class="fw-bold">Rev. Fr Denzil Lobo SJ</h5> 
                     <p class="sjc fw-bold mb-2">Director</p>
-                    <p class="spec text-uppercase mb-2">Assistant Professorv</p>
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
                     </a>
                   </div>
                 </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
+                  <div class="data-card">
+                     <a href="MTEzOQ==.php" target="_blank">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Sara_Kutty.webp" alt="Dr_Sara_Kutty">
+                    <h5 class="fw-bold">Dr Sara Kutty</h5>   
+                    <p class="sjc fw-bold mb-2">Exam Coordinator | Programme Coordinator</p>
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
+                     <h5 class="fw-bold text-primary">B-Block</h5>
+                    </a>
+                  </div>
+                </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="Mzk.php" target="_blank">
@@ -569,13 +597,58 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTk1.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Banu_M.webp" alt="Ms_Banu_M">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer+Science/Ms_Banu_M.png" alt="Ms_Banu_M">
                     <h5 class="fw-bold">Ms Banu M</h5> 
                     <p class="sjc fw-bold mb-2">JWL Coordinator</p>
                     <p class="spec text-uppercase mb-2">Assistant Professor</p>
                     </a>
                   </div>
                 </div>
+
+                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
+                  <div class="data-card">
+                     <a href="MTIzMQ==.php" target="_blank">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Mr_Prem_Sagar.webp" alt="Mr_Prem_Sagar">
+                    <h5 class="fw-bold">Mr Prem B.G </h5>   
+                     <p class="sjc fw-bold mb-2">BCA Shift III Coordinator</p>
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
+                    </a>
+                  </div>
+                </div>
+
+                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
+                  <div class="data-card">
+                     <a href="MTQxOQ.php" target="_blank">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Periyasamy_P.webp" alt="Dr_Periyasamy_P">
+                    <h5 class="fw-bold">Dr Periyasamy P </h5> 
+                    <p class="sjc fw-bold mb-2">M.C.A Coordinator</p>
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
+                    </a>
+                  </div>
+                </div>
+
+                  <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
+                  <div class="data-card">
+                     <a href="OTMx.php" target="_blank">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Puneeth_Kumar_B_S.webp" alt="Dr_Puneeth_Kumar_B_S">
+                    <h5 class="fw-bold">Dr Puneeth Kumar B S</h5>   
+                     <p class="sjc fw-bold mb-2">Welfare Officer </p>
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
+                    </a>
+                  </div>
+                </div>
+
+                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
+                  <div class="data-card">
+                     <a href="MTY2Ng.php" target="_blank">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Junaida_Nallakkandy.webp" alt="Ms_Junaida_Nallakkandy">
+                    <h5 class="fw-bold">Ms Junaida Nallakkandy </h5>
+                    <p class="sjc fw-bold mb-2">Welfare Officer </p> 
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
+                    </a>
+                  </div>
+                </div> 
+
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="ODA.php" target="_blank">
@@ -640,36 +713,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
-                  <div class="data-card">
-                     <a href="OTMx.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Puneeth_Kumar_B_S.webp" alt="Dr_Puneeth_Kumar_B_S">
-                    <h5 class="fw-bold">Dr Puneeth Kumar B S</h5>   
-                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
-                  <div class="data-card">
-                     <a href="MTEzOQ==.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Sara_Kutty.webp" alt="Dr_Sara_Kutty">
-                    <h5 class="fw-bold">Dr Sara Kutty</h5>   
-                    <p class="sjc fw-bold mb-2">Exam Coordinator | Programme Coordinator</p>
-                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
-                     <h5 class="fw-bold text-primary">B-Block</h5>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
-                  <div class="data-card">
-                     <a href="MTIzMQ==.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Mr_Prem_Sagar.webp" alt="Mr_Prem_Sagar">
-                    <h5 class="fw-bold">Mr Prem B.G </h5>   
-                     <p class="sjc fw-bold mb-2">BCA Coordinator, Shift III</p>
-                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
-                    </a>
-                  </div>
-                </div>
+                
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTM5NA.php" target="_blank">
@@ -688,16 +732,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
-                  <div class="data-card">
-                     <a href="MTQxOQ.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Dr_Periyasamy_P.webp" alt="Dr_Periyasamy_P">
-                    <h5 class="fw-bold">Dr Periyasamy P </h5> 
-                    <p class="sjc fw-bold mb-2">M.C.A Coordinator</p>
-                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
-                    </a>
-                  </div>
-                </div>
+               
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTU3OQ==.php" target="_blank">
@@ -738,7 +773,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTY4MA.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Pooja_A.webp" alt="Ms_Pooja_A">
+                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer+Science/Ms_Pooja_A.jpeg" alt="Ms_Pooja_A">
                     <h5 class="fw-bold">Ms Pooja A </h5> 
                     <p class="spec text-uppercase mb-2">Assistant Professor</p>
                     </a>
@@ -753,15 +788,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
-                  <div class="data-card">
-                     <a href="MTY2Ng.php" target="_blank">
-                    <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Junaida_Nallakkandy.webp" alt="Ms_Junaida_Nallakkandy">
-                    <h5 class="fw-bold">Ms Junaida Nallakkandy </h5> 
-                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
-                    </a>
-                  </div>
-                </div> 
+               
                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTY4OQ.php" target="_blank">
@@ -785,7 +812,7 @@
                      <a href="MTc5Nw.php" target="_blank">
                     <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer%20Science/Ms_Prakriti_Thapa.webp" alt="Ms_Prakriti_Thapa">
                     <h5 class="fw-bold">Ms Prakriti Thapa</h5> 
-                    <p class="spec text-uppercase mb-2">Teaching Assistant</p>
+                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
                     </a>
                   </div>
                 </div> 
@@ -808,7 +835,7 @@
                     </a>
                   </div>
                 </div> 
-                 <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
+                 <!-- <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTk1Ng==.php" target="_blank">
                     <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer+Science/Ms.+Umeda.webp" alt="Ms. Umeda">
@@ -816,7 +843,7 @@
                     <p class="spec text-uppercase mb-2">Assistant Professor</p>
                     </a>
                   </div>
-                </div> 
+                </div>  -->
                  <div class="col-lg-3 col-md-4 col-sm-6 data-item" data-category="faculty">
                   <div class="data-card">
                      <a href="MTk3OQ==.php" target="_blank">
@@ -857,7 +884,7 @@
                   <div class="data-card">
                      <a href="MTk1NA==.php" target="_blank">
                     <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer+Science/Ms.+Janeshwari+K.png" alt="Ms. Janeshwari K">
-                    <h5 class="fw-bold">Ms. Janeshwari K</h5> 
+                    <h5 class="fw-bold">Ms. Jananeshwari K</h5> 
                     <p class="spec text-uppercase mb-2">Assistant Professor</p>
                     </a>
                   </div>
@@ -877,7 +904,7 @@
                      <a href="MTAxMDM0.php">
                     <img src="https://sjub.s3.ap-south-1.amazonaws.com/IT/Computer+Science/Ms_Mustakheem_Sayem.jpg" alt="Ms. Mustakheem Sayem">
                     <h5 class="fw-bold">Ms. Mustakheem Sayem</h5> 
-                    <p class="spec text-uppercase mb-2">Assistant Professor</p>
+                    <p class="spec text-uppercase mb-2">Teaching Assistant</p>
                     </a>
                   </div>
                 </div>

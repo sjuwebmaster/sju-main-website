@@ -1,0 +1,84 @@
+      # php rule to strip
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. External Redirect: If someone visits a URL with .php, redirect them to the clean URL
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+    RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+    # 2. Internal Rewrite: If they visit the clean URL, silently load the .php file in the background
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+
+
+
+
+# ----------------------------------------------------------------------
+# 3. CUSTOM ERROR DOCUMENTS
+# ----------------------------------------------------------------------
+# This tells the server exactly which file to show for errors
+#ErrorDocument 403 /403.php
+ErrorDocument 401 /401.php
+# Custom Error Document for 404 Not Found
+# Force redirect missing .php files to your custom 404 page
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*\.php$ /404.php [L]
+
+      # php rule to strip
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. External Redirect: If someone visits a URL with .php, redirect them to the clean URL
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+    RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+    # 2. Internal Rewrite: If they visit the clean URL, silently load the .php file in the background
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+
+o generate your Google Client ID for the "Sign in with Google" feature, you'll need to set up a project in the Google Cloud Console.
+
+Here is the step-by-step guide to doing this:
+
+Step 1: Create a Google Cloud Project
+Go to the Google Cloud Console.
+Log in with your university or admin Google account.
+In the top navigation bar, click on the Select a project dropdown.
+Click New Project in the top right corner of the popup.
+Name it something recognizable (e.g., "SJU Admin Dashboard") and click Create.
+Step 2: Configure the OAuth Consent Screen
+Before you can create credentials, Google needs to know what this app is.
+
+In the left-hand menu, navigate to APIs & Services > OAuth consent screen.
+Choose the User Type:
+Internal: Only users within your Google Workspace organization (e.g., @sjub.edu.in emails) can log in. (Highly recommended for security!)
+External: Any Google account can attempt to log in (your PHP code will still block them if they aren't in your database).
+Click Create.
+Fill in the required details:
+App name: SJU Admin Portal
+User support email: Your email
+Developer contact information: Your email
+Click Save and Continue through the Scopes and Summary screens (you don't need to add any special scopes, the default email/profile scopes are enough).
+Step 3: Create the Credentials (Client ID)
+In the left menu, click on Credentials.
+Click + CREATE CREDENTIALS at the top, and select OAuth client ID.
+Under Application type, select Web application.
+Name the client (e.g., "Dashboard Login").
+Under Authorized JavaScript origins, click + ADD URI.
+Enter the base URL of your website exactly as it appears in the browser (e.g., https://sjub.edu.in). Note: Do not include a trailing slash or path.
+(Optional) If you are testing locally, you can also add http://localhost.
+Under Authorized redirect URIs, you can optionally add the exact URL of your dashboard (e.g., https://sjub.edu.in/Test/dashboard.php).
+Click Create.
+Step 4: Add it to your Configuration
+A popup will appear showing your Client ID and Client Secret. You only need the Client ID.
+
+Copy the Client ID (it will look something like 1234567890-abcdefg.apps.googleusercontent.com) and add it to your /home/sjubedu/config.php file:
+
+php
+// Add this anywhere in your config.php file
+$GOOGLE_CLIENT_ID = "YOUR_NEW_CLIENT_ID_HERE";
+Once saved, the "Sign in with Google" button will automatically appear on your dashboard login screen!

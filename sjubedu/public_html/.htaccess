@@ -1,0 +1,449 @@
+RewriteEngine on
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+<IfModule mod_headers.c>
+    # Institutional Identity and Discovery
+    Header set Link "</about/about-the-university.php>; rel=\"about\", </ai-directory.md>; rel=\"index\", </about/contact-us.php>; rel=\"help\", <https://admissions.sju.edu.in/>; rel=\"registration\""
+</IfModule>
+
+# 1. Set default character set to UTF-8
+# ============================================================
+# CACHING STRATEGY
+# ============================================================
+<IfModule mod_headers.c>
+    # --- OPTION A: DEVELOPMENT MODE (Active) ---
+    # Prevents all caching so you see your JS/CSS changes instantly.
+   # <FilesMatch "\.(html|php|js|css)$">
+      #  Header set Cache-Control "no-cache, no-store, must-revalidate"
+     #   Header set Pragma "no-cache"
+    #    Header set Expires 0
+  #  </FilesMatch>
+
+# ============================================================
+# CACHING STRATEGY: PRODUCTION MODE
+# ============================================================
+<IfModule mod_headers.c>
+    # 1. Pages: Check server for updates (revalidate)
+    # This keeps your HTML/PHP fresh but allows the browser to store a copy.
+    <FilesMatch "\.(html|php)$">
+       Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    # 2. Assets: Cache for 1 Year (Images, Fonts, JS, CSS)
+    # UNCOMMENTED: This fixes the "no-cache" issue for static files.
+    <FilesMatch "\.(js|css|jpg|jpeg|png|gif|ico|svg|webp|woff|woff2)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
+
+Header set X-Robots-Tag "noarchive, index, follow"
+Header set Link "<https://sju.edu.in/llms.txt>; rel='llms-txt'"
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. External Redirect: Strip .php ONLY if it's not an AJAX request
+    # This prevents the redirect from interfering with your fee_fetch.php call
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+    RewriteCond %{REQUEST_FILENAME} !fee_fetch.php
+    RewriteCond %{REQUEST_FILENAME} !news.php
+    RewriteCond %{REQUEST_FILENAME} !publications.php
+    RewriteCond %{REQUEST_FILENAME} !projects.php
+    RewriteCond %{REQUEST_FILENAME} !patents.php
+    RewriteCond %{REQUEST_FILENAME} !book-chapters.php
+    RewriteCond %{REQUEST_FILENAME} !books-published.php
+    RewriteCond %{REQUEST_FILENAME} !consultancy.php
+    RewriteCond %{REQUEST_FILENAME} !events-organised.php
+    RewriteCond %{REQUEST_FILENAME} !popular-media.php
+    RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+    # 2. Internal Rewrite: silently load the .php file
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+</IfModule>
+# 2. Disable Directory Browsing
+# Prevents users from seeing a list of files in a folder if no index file exists
+Options -Indexes
+
+
+# 4. ULTIMATE SECURITY HEADERS (YOUTUBE & CLIMATE CLOCK READY)
+<IfModule mod_headers.c>
+    # Content Security Policy - Fully updated for YouTube Embeds, Cloudflare Analytics, and PDF Viewers
+#Header always set Content-Security-Policy "upgrade-insecure-requests; \
+frame-ancestors 'self' https://sjubedu.in https://sju.edu.in; \
+default-src 'self' https:; \
+script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://sju.edu.in https://cdnjs.cloudflare.com https://*.googletagmanager.com https://*.google-analytics.com; \
+script-src-elem 'self' 'unsafe-inline' https://unpkg.com https://sju.edu.in https://cdnjs.cloudflare.com https://*.googletagmanager.com https://*.google-analytics.com; \
+style-src 'self' 'unsafe-inline' data: https://unpkg.com https://fonts.googleapis.com https://cdnjs.cloudflare.com; \
+style-src-elem 'self' 'unsafe-inline' data: https://unpkg.com https://fonts.googleapis.com https://cdnjs.cloudflare.com; \
+img-src 'self' data: blob: https: https://flagcdn.com https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com https://*.google-analytics.com; \
+font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; \
+connect-src 'self' http://ip-api.com https://*.tile.openstreetmap.org https://*.google-analytics.com https://*.analytics.google.com; \
+frame-src 'self' blob: data: https://www.youtube.com https://*.google.com https://*.facebook.com; \
+object-src 'none'; base-uri 'self'; form-action 'self' https:; report-uri /Test/csp-report.php;"
+# SJU Master CSP - Final Version (Supports Icons, Maps, Health Checks, and Analytics)
+#Header always set Content-Security-Policy "upgrade-insecure-requests; \
+frame-ancestors 'self' https://sju.edu.in https://sju.edu.in; \
+default-src 'self' https:; \
+script-src 'self' 'unsafe-inline' 'unsafe-eval' https://sju.edu.in https://sju.edu.in https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://*.googletagmanager.com https://*.google-analytics.com; \
+script-src-elem 'self' 'unsafe-inline' https://sju.edu.in https://sju.edu.in https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://*.googletagmanager.com https://*.google-analytics.com; \
+style-src 'self' 'unsafe-inline' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://cdnjs.cloudflare.com; \
+style-src-elem 'self' 'unsafe-inline' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://cdnjs.cloudflare.com; \
+img-src 'self' data: blob: https: https://flagcdn.com https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com https://*.google-analytics.com; \
+font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; \
+connect-src 'self' http://ip-api.com https://sju.edu.in https://sju.edu.in https://get.geojs.io https://raw.githubusercontent.com https://*.tile.openstreetmap.org https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://cdn.jsdelivr.net; \
+frame-src 'self' blob: data: https://www.youtube.com https://*.google.com https://*.facebook.com https://w.soundcloud.com; \
+object-src 'none'; base-uri 'self'; form-action 'self' https:; report-uri /Test/csp-report.php;"
+# Updated CSP for SJU Monitor (Maps, Charts, and GeoJS)
+#Header always set Content-Security-Policy "upgrade-insecure-requests; \
+    frame-ancestors 'self' https://*.sju.edu.in; \
+    default-src 'self' https://*.sju.edu.in; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.sju.edu.in https://sjric.res.in https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; \
+    style-src 'self' 'unsafe-inline' data: https://*.sju.edu.in https://sjric.res.in https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com; \
+    img-src 'self' data: blob: https://*.sju.edu.in https://sjric.res.in https://*.tile.openstreetmap.org https://unpkg.com https://cdnjs.cloudflare.com https://sjub.s3.ap-south-1.amazonaws.com https://sjudata.s3.ap-south-1.amazonaws.com; \
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; \
+    connect-src 'self' data: https://*.sju.edu.in https://sjric.res.in https://get.geojs.io https://*.tile.openstreetmap.org https://cdn.jsdelivr.net https://sjub.s3.ap-south-1.amazonaws.com https://sjudata.s3.ap-south-1.amazonaws.com; \
+    frame-src 'self' blob: data: https://www.youtube.com https://*.google.com; \
+    object-src 'none'; \
+    base-uri 'self'; \
+    form-action 'self'; \
+    report-uri /Test/csp-report.php;"
+    
+# report only
+#Header always set Content-Security-Policy "upgrade-insecure-requests; \
+    frame-ancestors 'self' https://*.sju.edu.in; \
+    default-src 'self' https://*.sju.edu.in; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.sju.edu.in https://sjric.res.in https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://static.cloudflareinsights.com; \
+    style-src 'self' 'unsafe-inline' data: https://*.sju.edu.in https://sjric.res.in https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com; \
+    img-src 'self' data: blob: https://*.sju.edu.in https://sjric.res.in https://*.tile.openstreetmap.org https://unpkg.com https://cdnjs.cloudflare.com https://sjub.s3.ap-south-1.amazonaws.com https://sjudata.s3.ap-south-1.amazonaws.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; \
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; \
+    connect-src 'self' data: https://*.sju.edu.in https://sjric.res.in https://get.geojs.io https://*.tile.openstreetmap.org https://cdn.jsdelivr.net https://sjub.s3.ap-south-1.amazonaws.com https://sjudata.s3.ap-south-1.amazonaws.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com; \
+    frame-src 'self' blob: data: https://www.youtube.com https://*.google.com https://td.doubleclick.net; \
+    object-src 'none'; \
+    base-uri 'self'; \
+    form-action 'self'; \
+    report-uri /Test/csp-report.php;"
+    # report only
+Header always set Content-Security-Policy "upgrade-insecure-requests; \
+    frame-ancestors 'self' https://*.sju.edu.in; \
+    default-src 'self' https://*.sju.edu.in; \
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.sju.edu.in https://sjric.res.in https://unpkg.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://static.cloudflareinsights.com https://w.soundcloud.com; \
+    style-src 'self' 'unsafe-inline' data: https://*.sju.edu.in https://sjric.res.in https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com; \
+    img-src 'self' data: blob: https://*.sju.edu.in https://sjric.res.in https://*.tile.openstreetmap.org https://unpkg.com https://cdnjs.cloudflare.com https://sjub.s3.ap-south-1.amazonaws.com https://sjudata.s3.ap-south-1.amazonaws.com https://images.weserv.nl https://api.qrserver.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.sndcdn.com; \
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; \
+    connect-src 'self' data: https://*.sju.edu.in https://sjric.res.in https://get.geojs.io https://*.tile.openstreetmap.org https://cdn.jsdelivr.net https://sjub.s3.ap-south-1.amazonaws.com https://sjudata.s3.ap-south-1.amazonaws.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://api-widget.soundcloud.com; \
+frame-src 'self' blob: data: https://www.youtube.com https://*.google.com https://td.doubleclick.net https://w.soundcloud.com https://sjudata.s3.ap-south-1.amazonaws.com https://sjub.s3.ap-south-1.amazonaws.com; \
+    object-src 'none'; \
+    base-uri 'self'; \
+    form-action 'self'; \
+    report-uri https://www.sju.edu.in/Test/csp-report.php;"
+ 
+# CUSTOM ERROR DOCUMENTS
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+
+
+
+# 1. Fix the Hardware Violation
+Header set Permissions-Policy "compute-pressure=()"
+Header always set X-Content-Type-Options "nosniff"
+    
+    # FIX FOR ERROR 153: Explicitly allow referrers to be sent to YouTube
+    Header always set Referrer-Policy "no-referrer-when-downgrade"
+    
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Strict Transport Security (HSTS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Permissions-Policy
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 5. Deny access to sensitive files
+# Protects config, logs (including CSP), backups, and environment variables
+<FilesMatch "\.(log|ini|env|sql|bak)$|^(config\.php|i_db\.php|csp_violations\.log)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 6. Block access to hidden files (starting with a dot)
+# Includes .git, .env, .htaccess, etc.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+    
+    <IfModule mod_mime.c>
+        AddType image/svg+xml .svg .svgz
+    </IfModule>
+</IfModule>
+# ============================================================
+# LIGHTWEIGHT WAF (Web Application Firewall)
+# ============================================================
+RewriteEngine On
+
+# 1. Block Malicious Request Methods (TRACE/TRACK)
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+
+# 2. Block aggressive scanners and bad bots
+RewriteCond %{HTTP_USER_AGENT} ^.*(libwww-perl|curl|wget|python|nikto|wikto|sf|sqlmap|bsqlbf|w3af|acunetix|havij|appscan).* [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^ApacheBench [NC]
+RewriteRule .* - [F,L]
+
+# 3. Block common SQL Injection and XSS patterns in the URL
+RewriteCond %{QUERY_STRING} (\|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} (javascript:).*(\;) [NC,OR]
+RewriteCond %{QUERY_STRING} (UNION|SELECT|INSERT|UPDATE|DELETE|DROP).* [NC,OR]
+RewriteCond %{QUERY_STRING} (boot\.ini|etc/passwd|self/environ) [NC,OR]
+RewriteCond %{QUERY_STRING} (base64_encode|localhost|loopback) [NC]
+RewriteRule .* - [F,L]
+# Block common SQL logic bypass patterns like ' OR 1=1
+RewriteCond %{REQUEST_URI} !^/bulletin/bulletin-view [NC]
+RewriteCond %{QUERY_STRING} [^a-z](OR|AND)\s+['"]?\d+['"]?\s*=\s*['"]?\d+ [NC,OR]
+# Block the SQL comment dash pattern used to hide the rest of a query
+RewriteCond %{QUERY_STRING} (--|#|/\*) [NC]
+RewriteCond %{REQUEST_URI} !^/bulletin/bulletin-view [NC]
+RewriteRule .* - [F,L]
+
+
+# Force HTTPS in the htaccess file
+
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} sju\.edu\.in [NC]
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://sju.edu.in/$1 [R,L]
+
+
+# Force HTTPS and WWW in a single redirect hop
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^sju\.edu\.in [NC]
+RewriteRule ^(.*)$ https://www.sju.edu.in/$1 [L,R=301]
+
+# redirect to new NIRF page
+RewriteEngine On
+Redirect 301 /about/nirf https://www.sju.edu.in/about/iqac/sju-iqac-nirf
+# Force redirect specific pages to homepage
+
+RewriteCond %{REQUEST_URI} ^/student-support/scholarships\.php$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/library/library$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/index2\.php$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/cdn-cgi/l/email-protection$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/internationalstudents/internationalstudents$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/about/iqac/announcements\.php$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/about/iqac/student-support/equaloppurtunitycell\.php$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/bulletin/announcements\.php$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/bulletin/student-support/equaloppurtunitycell\.php$ [NC,OR]
+
+RewriteCond %{REQUEST_URI} ^/news\.php$ [NC,OR]
+
+RewriteCond %{REQUEST_URI} ^/sju_admin/assets/admin/uploads/books/original/?$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/sju_admin/assets/admin/uploads/news/original/.*$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/assets/img/news-events\.webp$ [NC]
+
+RewriteRule ^ https://sju.edu.in/ [R=301,L]
+
+#RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} ^sju\.edu\.in [NC]
+#RewriteRule ^(.*)$ https://www.sju.edu.in/$1 [L,R=301]
+
+# Admit Card
+RewriteEngine On
+# This matches the filename regardless of how the space is encoded
+RewriteRule ^uploads/topMenu/Downloading.*E-Admit.*Card_20240216014714\.pdf$ https://sjudata.s3.ap-south-1.amazonaws.com/Admissions/interview+admit+card.pdf [R=301,L,NE]
+
+# Redirect Bachelor of Arts (B.A.) in International Relations and Peace Studies, Journalism & Public Policy
+
+RewriteEngine On
+
+# Use RewriteRule for more precision with long paths
+RewriteRule ^courses/st-joseph-university/school-of-languages-and-literatures/english/bajir/?$ https://www.sju.edu.in/school-of-languages-and-literatures/department-of-journalism/ba-international-relations-and-peace-studies-journalism-and-public-policy [R=301,L,NC]
+
+# FAQ
+RewriteRule ^faq/?$ https://www.sju.edu.in/faq.php [R=301,L]
+
+# Admissions
+RewriteRule ^admissions/?$ https://sju.edu.in/admissions/admissions.php [R=301,L]
+# Log Monitor
+RewriteRule ^log\.php$ - [L]
+# Career
+RewriteRule ^career/?$ https://sju.edu.in/whysju/career.php [R=301,L]
+
+# Candidate Shortlisted
+RewriteRule ^candidateshortlisted/?$ https://sju.edu.in/admissions/shortlisted-candidates.php [R=301,L]
+
+# Communication Department
+RewriteRule ^departments/st-joseph-university/school-of-communication-and-media-studies/Communication/?$ https://www.sju.edu.in/school-of-communication-media-studies/department-of-communication-media-studies/department-of-communication-media-studies.php [R=301,L]
+
+# Placements
+RewriteRule ^placements/?$ https://sju.edu.in/placements/about-placements.php [R=301,L]
+
+# MSc Computer Science
+RewriteRule ^courses/st-joseph-university/school--of-information-technology/computer-science-and-computer-application/master-of-science-in-computer-science/?$ https://sju.edu.in/school-of-information-technology/department-of-computer-science/department-of-computer-science.php [R=301,L]
+
+# Environmental Science typo fix
+RewriteRule ^school-of-life-sciences/department-of-enviornmental-science/department-of-enviornmental-science\.php$ https://sju.edu.in/school-of-life-sciences/department-of-environmental-science/department-of-enviornmental-science.php [R=301,L]
+
+# Social Work
+RewriteRule ^departments/st-joseph-university/school-of-social-work/social-work/?$ https://www.sju.edu.in/school-of-social-work/department-of-social-work/department-of-social-work.php [R=301,L]
+
+# School of Life Sciences
+RewriteRule ^academics/st-joseph-university/school-of-life-sciences/?$ https://www.sju.edu.in/school-of-life-sciences/school-of-life-sciences.php [R=301,L]
+
+# International Relations
+RewriteRule ^departments/st-joseph-university/school-of-humanities-and-social-sciences/International-Relations,-Peace-and-Public-Policy/?$ https://www.sju.edu.in/school-of-humanities-and-social-sciences/department-of-international-relations-peace-and-public-policy/department-of-international-relations-peace-and-public-policy.php [R=301,L]
+
+# History
+RewriteRule ^departments/st-joseph-university/school-of-humanities-and-social-sciences/History/?$ https://www.sju.edu.in/school-of-humanities-and-social-sciences/department-of-history/department-of-history.php [R=301,L]
+
+# Journalism
+RewriteRule ^departments/st-joseph-university/school-of-languages-and-literatures/Journalism/?$ https://www.sju.edu.in/school-of-languages-and-literatures/department-of-journalism/department-of-journalism.php [R=301,L]
+
+# Mathematics
+RewriteRule ^departments/st-joseph-university/school-of-physical-sciences/mathematics/?$ https://www.sju.edu.in/school-of-physical-sciences/department-of-mathematics/department-of-mathematics.php [R=301,L]
+
+# BCom Course
+RewriteRule ^courses/st-joseph-university/school-of-business/Department-of-Commerce/bachelor-of-commerce/?$ https://www.sju.edu.in/school-of-business/department-of-commerce/bachelor-of-commerce.php [R=301,L]
+
+RewriteRule ^vision-and-mission/?$ https://www.sju.edu.in/about/vision-and-mission.php [R=301,L]
+RewriteRule ^all-courses/?$ https://www.sju.edu.in/admissions/all-programmes [R=301,L]
+
+RewriteEngine On
+
+# /library/ → /library/library.php
+RewriteRule ^library/?$ https://www.sju.edu.in/library/library.php [R=301,L]
+
+# /examination → /examination/examination.php
+RewriteRule ^examination/?$ https://www.sju.edu.in/examination/examination.php [R=301,L]
+
+# /Mid Day Meals → /student-support/campusinistry/middaymeals.php
+RewriteRule ^Mid%20Day%20Meals/?$ https://www.sju.edu.in/student-support/campusinistry/middaymeals.php [R=301,L]
+
+# /Scholarships for students → /student-support/scholarships_page
+RewriteRule ^Scholarships%20for%20students/?$ https://www.sju.edu.in/student-support/scholarships_page [R=301,L]
+
+RewriteEngine On
+
+# Mid Day Meals
+RewriteRule ^Mid%20Day%20Meals$ https://www.sju.edu.in/student-support/campusinistry/middaymeals [R=301,L]
+
+# Scholarships for students
+RewriteRule ^Scholarships%20for%20students$ https://www.sju.edu.in/student-support/scholarships_page [R=301,L]
+
+
+# Return 410 Gone for removed pages
+
+Redirect gone /gallery/66
+Redirect gone /announcements/view-pdf/sjuchemenviron23
+Redirect gone /announcements/view-pdf/sjubjesday
+Redirect gone /announcements/view-pdf/sjufeast2023
+Redirect gone /announcements/view-pdf/sjushift3interview31may2023
+Redirect gone /announcements/view-pdf/sjubba7am20232
+Redirect gone /announcements/view-pdf/sjubbasf7am20232
+Redirect gone /announcements/view-pdf/sjubcom7am24may2023
+Redirect gone /announcements/view-pdf/sjubcombps7bcom12
+Redirect gone /announcements/view-pdf/sjubcomifa7am232
+Redirect gone /announcements/view-pdf/sju16thnovbom
+Redirect gone /gallery/9
+Redirect gone /announcements/view-pdf/sjumsccourses2023
+Redirect gone /announcements/view-pdf/sjubscelectcomp20234
+Redirect gone /events/international-conference
+Redirect gone /announcements/view-pdf/2ndsec
+Redirect gone /announcements/view-pdf/sjubapolcommeng20233
+Redirect gone /announcements/view-pdf/sjubscphymat2023
+Redirect gone /announcements/view-pdf/sjubscchemzoo20233
+Redirect gone /announcements/view-pdf/coursematerialopenelectives202401
+Redirect gone /gallery/96
+Redirect gone /announcements/view-pdf/sjubba7am20234
+Redirect gone /announcements/view-pdf/sjubsccompelec2023
+Redirect gone /announcements/view-pdf/sjubscbiologybiotech2023
+Redirect gone /announcements/view-pdf/sjubaecosoci20232
+Redirect gone /gallery/1
+Redirect gone /announcements/view-pdf/sjuwaitlistmscphysics2023
+Redirect gone /announcements/view-pdf/condolencemeeting
+Redirect gone /announcements/view-pdf/oeintroroom-no2
+Redirect gone /announcements/view-pdf/sjubscelectcomp2023
+Redirect gone /announcements/sjuexamkant
+Redirect gone /events/exodus
+Redirect gone /announcements/sjuclosmscbiotechorganic
+Redirect gone /library/news/sjulib-news
+Redirect gone /announcements/view-pdf/managementscholarship2425
+Redirect gone /announcements/view-pdf/sjubajirp2023
+Redirect gone /announcements/view-pdf/hrdtheologynotice2023
+Redirect gone /announcements/view-pdf/sjumsces12may2023
+Redirect gone /announcements/view-pdf/sjubcombbamcon20233
+Redirect gone /announcements/view-pdf/sjubscmathscomp2023
+Redirect gone /announcements/view-pdf/otherdutyattendance24
+Redirect gone /gallery/133
+Redirect gone /announcements/view-pdf/endsemester1
+Redirect gone /announcements/view-pdf/sjubcomifa7am2023
+Redirect gone /announcements/view-pdf/sjumscstat23
+Redirect gone /announcements/view-pdf/pgexam11
+Redirect gone /announcements/view-pdf/sjugrievancecell2023
+Redirect gone /announcements/view-pdf/sjubsw20232
+Redirect gone /announcements/view-pdf/sjubaecopsy2023
+Redirect gone /announcements/view-pdf/sjuattendacelastday23aug24
+Redirect gone /announcements/view-pdf/sjubscelectronicscomputersci20233
+Redirect gone /announcements/view-pdf/sjubscelectronicsandcs13may2023
+Redirect gone /admissions/admissions/admissions.php
+
+
+#Redirect 301 /services/sju-document-verification https://www.sju.edu.in/
+#Redirect 301 /services/che/che-faculty https://www.sju.edu.in/
+Redirect 301 /uploads/cmsmenu/ https://www.sju.edu.in/
+
+RewriteEngine On
+
+# Return 410 Gone for specific URLs
+RewriteRule ^Mid%20Day%20Meals$ - [G,L]
+RewriteRule ^Document%20Verification$ - [G,L]
+RewriteRule ^uploads/cmsmenu/?$ - [G,L]
+RewriteRule ^Scholarships%20for%20students$ - [G,L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php8_module>
+   php_flag display_errors Off
+   php_value max_execution_time 600
+   php_value max_input_time 600
+   php_value max_input_vars 7000
+   php_value memory_limit 256M
+   php_value post_max_size 2048M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php82"
+   php_value upload_max_filesize 2048M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 600
+   php_value max_input_time 600
+   php_value max_input_vars 7000
+   php_value memory_limit 256M
+   php_value post_max_size 2048M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php82"
+   php_value upload_max_filesize 2048M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
