@@ -164,6 +164,9 @@
 			  <a href="examinationmanual.php" class="nav-link">
                 <i class="fa-solid fa-angle-right me-2"></i>   Examination Manual
             </a>
+        <a href="convocation.php" class="nav-link">
+                <i class="fa-solid fa-angle-right me-2"></i>   Convocation
+            </a>
             
           </nav>
 
@@ -181,9 +184,331 @@
 		  <!--<div class="search-wrapper">
             <input type="text" id="searchBar" placeholder="Search for application forms (e.g., 'Supplementary', 'Scribe', 'Additional Marks')..." onkeyup="searchNotices()">
         </div>-->
+        
+
+
+      <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_13.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_13.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+      </div>
+
+          <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_12.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_12.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+      </div> -->
+
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_11.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_11.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+      </div> -->
+
+           <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_09.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_09.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+      </div> -->
+
+      <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_07.11.2026 ALL THE SEASSIONN</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_07.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+      </div> -->
+
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_06.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_06.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> -->
+
+         <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_05.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_05.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> -->
+
+          <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_04.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_04.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> -->
+
+        <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_03.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_03.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+          <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_02.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_02.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+            <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_31.10.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_31.10.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+           <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_30.10.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_30.10.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+           <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_29.10.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_29.10.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+           <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_28.10.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/announcements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_28.10.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+         <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">UPDATED_SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026_MULTIDISCIPLINARY ELECTIVE_ 31.10.2026 Saturday TIME 9.00 am - 11.10 am_UG THIRD SEMESTER_SHIFT I , II & III</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/UPDATED_SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026_MULTIDISCIPLINARY+ELECTIVE_+31.10.2026+Saturday+TIME+9.00+am+-+11.10+am_UG+THIRD+SEMESTER_SHIFT+I+%2C+II+%26+III+(1).pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+            <!-- pdf-1 -->
+
+        <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_27.10.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_27.10.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>   -->
+            <!-- pdf-1 -->
+
+         <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026_SKILL DEVELOPMENT_ 30.10.2026 Friday TIME - 9.00 am_UG FIFTH SEMESTER_SHIFT I , II & III.</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026_SKILL+DEVELOPMENT_+30.10.2026+Friday+TIME+-+9.00+am_UG+FIFTH+SEMESTER_SHIFT+I+%2C+II+%26+III.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+            <!-- pdf-1 -->
+
+         <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026_Research Methodology _ 28.10.2026 Wednesday TIME 9.00 am - 11.10 am_UG FIFTH SEMESTER_SHIFT I , II & III</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026_Research+Methodology+_+28.10.2026++Wednesday+TIME+9.00+am+-+11.10+am_UG+FIFTH+SEMESTER_SHIFT+I+%2C+II+%26+III.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+            <!-- pdf-1 -->
 
           <!-- pdf-1 -->
         <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026 - UG THIRD SEMESTER</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026+-+UG+THIRD+SEMESTER.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+         <!-- pdf-1 -->
+
+          <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026 - PG FIRST SEMESTER</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026+-+PG+FIRST+SEMESTER.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+         <!-- pdf-1 -->
+
+          <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026 - UG HONOURS SEVENTH SEMESTER</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026+-+UG+HONOURS+SEVENTH+SEMESTER.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+         <!-- pdf-1 -->
+
+          <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026 - UG FIRST SEMESTER</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026+-+UG+FIRST+SEMESTER.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+         <!-- pdf-1 -->
+
+           <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026 - PG THIRD SEMESTER</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026+-+PG+THIRD+SEMESTER.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+         <!-- pdf-1 -->
+
+          <!-- pdf-1 -->
+        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">SEATING ARRANGEMENT_END SEMESTER EXAMINATION OCTOBER 2026 - UG FIFTH SEMESTER</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/SEATING+ARRANGEMENT_END+SEMESTER+EXAMINATION+OCTOBER+2026+-+UG+FIFTH+SEMESTER.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div>  
+         <!-- pdf-1 -->
+
+          <!-- pdf-1 -->
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
 			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
                 <div class="calendar-icon">
                   <i class="fas fa-file-pdf"></i>
@@ -193,10 +518,11 @@
 			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/CA+%26+MAKEUP+EXAMINATION+SEPTEMBER+2026+-+SEATING+ARRANGEMENT+-+SHIFT+I+%2C+II+AND+III+-+18.09.2026_TIME+1PM..pdf" target="_blank">
               View Document →
              </a> 
-            </div>  
+            </div>   -->
          <!-- pdf-1 -->
+
           <!-- pdf-1 -->
-        <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+        <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
 			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
                 <div class="calendar-icon">
                   <i class="fas fa-file-pdf"></i>
@@ -206,8 +532,10 @@
 			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/CA+%26+MAKEUP+EXAMINATION+SEPTEMBER+2026+-+SEATING+ARRANGEMENT+-+SHIFT+I+%2C+II+AND+III+-+18.09.2026_TIME+3PM..pdf" target="_blank">
               View Document →
              </a> 
-            </div>  
+            </div>   -->
          <!-- pdf-1 -->
+
+
           <!-- pdf-1 -->
         <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
 			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
