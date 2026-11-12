@@ -22,12 +22,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Structure of IQAC | St Joseph's University, Bengaluru</title>
-    <meta name="description" content="Structure of IQAC — Internal Quality Assurance Cell of St Joseph's University, Bengaluru. Overseeing academic excellence, NAAC accreditation and institutional development.">
-    <meta name="keywords" content="IQAC SJU Bengaluru, NAAC accredited university Bengaluru, quality assurance Karnataka university, SJU institutional quality, IQAC annual report Bengaluru">
-    <meta name="robots" content="INDEX,FOLLOW">
     <link rel="canonical" href="https://www.sju.edu.in/about/iqac/structure-of-iqac">
-
-    <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="St Joseph's University, Bengaluru">
     <meta property="og:title" content="Structure of IQAC | St Joseph's University, Bengaluru">
@@ -41,6 +36,9 @@
     <meta name="twitter:title" content="Structure of IQAC | St Joseph's University, Bengaluru">
     <meta name="twitter:description" content="Structure of IQAC — Internal Quality Assurance Cell of St Joseph's University, Bengaluru. Overseeing academic excellence, NAAC accreditation and institutional development.">
     <meta name="twitter:image" content="https://www.sju.edu.in/assets/img/st-joseph-university-logo.png">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="description" content="Structure of IQAC — Internal Quality Assurance Cell of St Joseph's University, Bengaluru. Overseeing academic excellence, NAAC accreditation and institutional development.">
+    <meta name="keywords" content="IQAC SJU Bengaluru, NAAC accredited university Bengaluru, quality assurance Karnataka university, SJU institutional quality, IQAC annual report Bengaluru">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -78,7 +76,6 @@
  <!--   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" /> -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -300,8 +297,8 @@
                      <i class="fas fa-graduation-cap"></i>
                    </div>
                    <div>
-                     <h6 class="mb-1">Mr Nagesh	Society </h6>
-                     <small>Member</small>
+                     <h6 class="mb-1">Mr Nagesh	 </h6>
+                     <small>Society Member</small>
                    </div>
                  </div>
                </div>
@@ -320,12 +317,27 @@
                   <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <h6 class="mb-1">Dr Ronald J Mascarenhas</h6>
+                  <h6 class="mb-1">Dr Rabbi Akkiba Angiras</h6>
                   <small>Pro-Vice-Chancellor</small>
+                    <!-- <small>Dean, School of Physical Sciences</small> -->
                 </div>
               </div>
             </div>
 
+            
+            <div class="col-lg-3 col-md-6 col-6">
+              <div class="member-card d-flex align-items-start">
+                <div class="icon-circle me-3">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1">Dr V. Christo Selvan</h6>
+                  <small>Pro-Vice-Chancellor - B-Block</small>
+                    <!-- <small>Dean, School of Business</small> -->
+                </div>
+              </div>
+            </div>
+<!-- 
             <div class="col-lg-3 col-md-6 col-6">
               <div class="member-card d-flex align-items-start">
                 <div class="icon-circle me-3">
@@ -336,7 +348,19 @@
                   <small>Pro-Vice-Chancellor</small>
                 </div>
               </div>
-            </div>
+            </div> -->
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+              <div class="member-card d-flex align-items-start">
+                <div class="icon-circle me-3">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1">Dr Ronald Mascarenhas</h6>
+                  <small>Pro-Vice-Chancellor</small>
+                </div>
+              </div>
+            </div> -->
+
 
             <div class="col-lg-3 col-md-6 col-6">
               <div class="member-card d-flex align-items-start">
@@ -356,35 +380,13 @@
                   <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <h6 class="mb-1">Dr C Mohanadas</h6>
+                  <h6 class="mb-1">Prof. Dr Godwin D’Souza</h6>
                   <small>Controller of Examinations</small>
                 </div>
               </div>
             </div> 
-            <div class="col-lg-3 col-md-6 col-6">
-                <div class="member-card d-flex align-items-start">
-                    <div class="icon-circle me-3">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h6 class="mb-1">Rev Fr Denzil Lobo SJ</h6>
-                        <small>Dean, School of Information Technology</small>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
-                <div class="member-card d-flex align-items-start">
-                    <div class="icon-circle me-3">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h6 class="mb-1">Rev Dr Richard Rego SJ</h6>
-                        <small>Dean, School of Communication and Media Studies</small>
-                    </div>
-                </div>
-            </div>
-
+            
             <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
@@ -397,7 +399,19 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+             <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                         <h6 class="mb-1">Prof. Dr Paul Newman</h6>
+                         <small>Dean, School of Humanities</small>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
@@ -415,73 +429,87 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1">Dr Tulika Bhattacharya</h6>
-                        <small>Dean, School of Humanities</small>
+                        <h6 class="mb-1">Dr Padma Nandanan Karioth</h6>
+                       <small>Dean (In-charge), School of Business</small>
+                        <!-- <small>Criterion 1 - Curricular Design</small> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+               <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1">Dr Rabbi Akkiba Angiras</h6>
-                        <small>Dean, School of Physical Sciences</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-6">
-                <div class="member-card d-flex align-items-start">
-                    <div class="icon-circle me-3">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h6 class="mb-1">Dr Libi Thomas</h6>
+                        <h6 class="mb-1">Prof. Nalini G. Sundaram</h6>
                         <small>Dean, School of Chemical Sciences</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+             <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1">Dr Beatrice Sequeira</h6>
+                        <h6 class="mb-1">Dr Parinitha L. Shinde</h6>
+                        <small>Dean (In-charge), School of Communication and Media Studies</small>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Dr A.M. Bojamma</h6>
+                        <small>Dean, School of Information Technology</small>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Dr Susan Mary Philip</h6>
                         <small>Dean, School of Life Sciences</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+              <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1">Rev Dr Augustine Lourdu</h6>
-                        <small>Dean, School of Social Work</small>
+                        <h6 class="mb-1">Dr Parul Goel</h6>
+                        <small>Dean, School of Physical Sciences</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+            
+              <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1">Dr V Christo Selvan</h6>
-                        <small>Dean, School of Business</small>
+                        <h6 class="mb-1">Dr Alan Godfrey</h6>
+                        <small>Dean (In-charge), School of Social Work</small>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+               <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
@@ -493,7 +521,114 @@
                 </div>
             </div>
 
+               <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Rev. Fr Dr Bala Kiran Kumar Hrudayaraj SJ</h6>
+                        <small>Director, Shift III</small>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Rev. Dr Fr Alphonse Pius Fernandes SJ </h6>
+                        <small> Director, B-Block</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+              <div class="member-card d-flex align-items-start">
+                <div class="icon-circle me-3">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1">Dr C Mohanadas</h6>
+                  <small>Controller of Examinations</small>
+                </div>
+              </div>
+            </div>  -->
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Rev Fr Denzil Lobo SJ</h6>
+                        <small>Dean, School of Information Technology</small>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Rev Dr Richard Rego SJ</h6>
+                        <small>Dean, School of Communication and Media Studies</small>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Dr Tulika Bhattacharya</h6>
+                        <small>Dean, School of Humanities</small>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Dr Libi Thomas</h6>
+                        <small>Dean, School of Chemical Sciences</small>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Dr Beatrice Sequeira</h6>
+                        <small>Dean, School of Life Sciences</small>
+                    </div>
+                </div>
+            </div> -->
+<!-- 
             <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Rev Dr Augustine Lourdu</h6>
+                        <small>Dean, School of Social Work</small>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
@@ -503,45 +638,45 @@
                         <small>Director Shift 3</small>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-3 col-md-6 col-6">
+    <!-- Continue same pattern for remaining Criteria & Members -->
+
+          <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1">Dr Padma Nandanan Karioth</h6>
+                        <h6 class="mb-1">Dr Maruthu Pandiyan </h6>
                         <small>Criterion 1 - Curricular Design</small>
                     </div>
                 </div>
             </div>
 
-    <!-- Continue same pattern for remaining Criteria & Members -->
-
-            <div class="col-lg-3 col-md-6 col-6">
+             <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
-                </div>
+                    </div>
                     <div>
-                        <h6 class="mb-1">Dr Paramesha Mallegowda</h6>
+                        <h6 class="mb-1">Dr Paramesh Mallegowda</h6>
                         <small>Criterion 2 - Faculty Resources</small>
-                        </div>
                     </div>
                 </div>
+            </div>
 
             <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
-                </div>
+                    </div>
                     <div>
-                        <h6 class="mb-1">Dr Jayshankar M</h6>
+                        <h6 class="mb-1">Dr Jayashankar M</h6>
                         <small>Criterion 3 - Infrastructure</small>
-                        </div>
                     </div>
                 </div>
+            </div>
 
             <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
@@ -549,7 +684,8 @@
                         <i class="fas fa-graduation-cap"></i>
                 </div>
                     <div>
-                        <h6 class="mb-1">Mr Cyril</h6>
+                        <!-- <h6 class="mb-1">Mr Cyril</h6> -->
+                        <h6 class="mb-1">Mr Charles Ambrose</h6>
                         <small>Criterion 4 - Financial Resources & Management</small>
                         </div>
                     </div>
@@ -561,7 +697,8 @@
                         <i class="fas fa-graduation-cap"></i>
                 </div>
                     <div>
-                        <h6 class="mb-1">Ms Poonam R. Ahuja</h6>
+                        <!-- <h6 class="mb-1">Ms Poonam R. Ahuja</h6> -->
+                        <h6 class="mb-1">Dr Chandni Bhambhani</h6>
                         <small>Criterion 5 - Learning & Teaching</small>
                         </div>
                     </div>
@@ -573,7 +710,8 @@
                         <i class="fas fa-graduation-cap"></i>
                 </div>
                     <div>
-                        <h6 class="mb-1">Mr Prem B. G.</h6>
+                        <!-- <h6 class="mb-1">Mr Prem B. G.</h6> -->
+                        <h6 class="mb-1">Dr Achuth A</h6>
                         <small>Criterion 6 - Extended Curricular Engagements</small>
                         </div>
                     </div>
@@ -585,7 +723,8 @@
                         <i class="fas fa-graduation-cap"></i>
                 </div>
                     <div>
-                        <h6 class="mb-1">Dr Vaishnavi M</h6>
+                        <!-- <h6 class="mb-1">Dr Vaishnavi M</h6> -->
+                         <h6 class="mb-1">Dr Reena Saritha Serrao</h6>
                         <small>Criterion 7 - Governance & Administration</small>
                         </div>
                     </div>
@@ -597,7 +736,8 @@
                         <i class="fas fa-graduation-cap"></i>
                 </div>
                     <div>
-                        <h6 class="mb-1">Dr Prashanthi</h6>
+                        <!-- <h6 class="mb-1">Dr Prashanthi</h6> -->
+                           <h6 class="mb-1">Dr Mrinmoyee B</h6>
                         <small>Criterion 8 - Student Outcomes</small>
                         </div>
                     </div>
@@ -621,8 +761,58 @@
                         <i class="fas fa-graduation-cap"></i>
                 </div>
                     <div>
-                        <h6 class="mb-1">Dr S. Rama Gokula Krishnan</h6>
+                        <!-- <h6 class="mb-1">Dr S. Rama Gokula Krishnan</h6> -->
+                          <h6 class="mb-1">Dr Kumar M</h6>
                         <small>Criterion 10 - Sustainability Outcomes</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                </div>
+                    <div>
+                          <h6 class="mb-1">Dr K.S. Ali</h6>
+                        <small>University Librarian</small>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                </div>
+                    <div>
+                          <h6 class="mb-1">Dr Sivakannan S</h6>
+                        <small>President & IPR Coordinator,Institution’s Innovation Council (IIC) </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                </div>
+                    <div>
+                          <h6 class="mb-1">Mr Anil P</h6>
+                        <small>Placement Office </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                </div>
+                    <div>
+                          <h6 class="mb-1">Ms Emilda D’Souza</h6>
+                        <small>Office Superintendent</small>
                         </div>
                     </div>
                 </div>
@@ -634,7 +824,19 @@
                 </div>
                     <div>
                         <h6 class="mb-1">Ms Swathi S Narayan</h6>
-                        <small>Secretary</small>
+                        <small>Secretary,IQAC</small>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="col-lg-3 col-md-6 col-6">
+                <div class="member-card d-flex align-items-start">
+                    <div class="icon-circle me-3">
+                        <i class="fas fa-graduation-cap"></i>
+                </div>
+                    <div>
+                        <h6 class="mb-1">Mr Christon Prashanth Dsouza </h6>
+                        <small>Secretary,IQAC</small>
                         </div>
                     </div>
                 </div>
@@ -651,7 +853,7 @@
                     </div>
                 </div>
 
-            <div class="col-lg-3 col-md-6 col-6">
+            <!-- <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
@@ -661,9 +863,9 @@
                         <small>Member, Shift III</small>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-            <div class="col-lg-3 col-md-6 col-6">
+            <!-- <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
@@ -673,9 +875,9 @@
                         <small>Member, Shift III</small>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-            <div class="col-lg-3 col-md-6 col-6">
+            <!-- <div class="col-lg-3 col-md-6 col-6">
                 <div class="member-card d-flex align-items-start">
                     <div class="icon-circle me-3">
                         <i class="fas fa-graduation-cap"></i>
@@ -685,7 +887,7 @@
                         <small>Member, Shift III</small>
                         </div>
                     </div>
-                </div>
+                </div> -->
         
     <!-- Member End -->
 
