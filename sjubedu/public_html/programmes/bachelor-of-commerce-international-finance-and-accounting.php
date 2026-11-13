@@ -19,8 +19,7 @@
             <ul class="list-unstyled batch-list">
               <li class="batch-item">
                 <span>Batch I</span>
-                <strong>7:00 AM to 12:00 PM(closed on 23/June/2026)</strong>
-                <!-- <strong>7:00 AM to 12:00 PM(closed on 07/04/2023)</strong> -->
+                <strong>7:00 AM to 12:00 PM</strong>
               </li>
               <li class="batch-item">
                 <span>Batch II</span>
@@ -109,10 +108,12 @@
                     (whatever is available) and photos.</p>
                     <p style="text-align:left;"><strong>Selection Process : </strong>The candidates have to appear for an entrance test. The details of the entrance test are detailed below. 
                     The shortlisted candidates will be called for an interview. There are two rounds in the interview. The dates of the entrance test and the subsequent interview will be 
-                    announced on the website. Once the final interview is over, candidates have to pay their programme fee within 3 days in full and the mode of payment must be online.</p>
-                    <p style="text-align:left;"><strong>Entrance Test : </strong><a href="../../assets/documents/SJUET-2026-Syllabus.pdf" target="_blank" rel="noopener noreferrer"
+                    announced on the website. Once the final interview is over, candidates have to pay their programme fee within <b>3 days, including holidays</b> in full and the mode of payment must be online.</p>
+                     <p style="text-align:left;"><strong>Entrance Test : </strong><a href="https://sjub.s3.ap-south-1.amazonaws.com/Business/Commerce/SJUET/B.+Com+IFA.docx" target="_blank" rel="noopener noreferrer"
                                         class="syllabus-download" aria-label="Download Bachelor of Commerce Syllabus 2021-2022 onwards PDF">
-                                        <i class="fas fa-file-pdf me-2" aria-hidden="true" style="color:#b71d21;"></i>SJUET 2026 Syllabus</a></p>
+                    <!-- <p style="text-align:left;"><strong>Entrance Test : </strong><a href="../../assets/documents/SJUET-2026-Syllabus.pdf" target="_blank" rel="noopener noreferrer"
+                                        class="syllabus-download" aria-label="Download Bachelor of Commerce Syllabus 2021-2022 onwards PDF"> -->
+                                        <i class="fas fa-file-pdf me-2" aria-hidden="true" style="color:#b71d21;"></i>SJUET 2027 Syllabus</a></p>
                     </div>
         </article>
         <article id="eligibility" class="dept-section department_tab pgm-details mt-5 p-3">
@@ -165,7 +166,7 @@
                </div>
         </article>
         <article id="fee-structure" class="dept-section department_tab pgm-details mt-5 mb-5">
-            <h3 class="fw-bold text-blue mb-3">Fee Structure</h3>
+            <h3 class="fw-bold text-blue mb-3">Fee Structure for the Year 2027-2028</h3>
                <div class="table-responsive">
                          <table class="table table-responsive table-bordered align-middle fee-table table-col-compact">
                            <thead>
@@ -185,31 +186,31 @@
                                <td>₹5,000</td>
                                <td>₹5,000</td>
                                <td>₹5,000</td>
-                               <td>₹5,000 / US $56</td>
+                               <td>₹5,000</td>
                              </tr>
                              <tr>
                                <th scope="row">I Year</th>
-                               <td>₹1,90,000</td>
-                               <td>₹2,10,000</td>
-                               <td>₹2,50,000</td>
-                               <td>₹2,50,000</td>
-                               <td>₹2,90,000/US $3225</td>
+                               <td>₹2,00,000</td>
+                               <td>₹2,25,000</td>
+                               <td>₹2,60,000</td>
+                               <td>₹2,60,000</td>
+                               <td>₹3,00,000</td>
                              </tr>
                              <tr class="table-light">
                                <th scope="row">II Year</th>
-                               <td>₹1,95,000</td>
-                               <td>₹2,15,000</td>
-                               <td>₹2,55,000</td>
-                               <td>₹2,55,000</td>
-                               <td>₹2,95,000/US $3278</td>
+                               <td>₹2,05,000</td>
+                               <td>₹2,30,000</td>
+                               <td>₹2,65,000</td>
+                               <td>₹2,65,000</td>
+                               <td>₹3,05,000</td>
                              </tr>
                              <tr>
                                <th scope="row">III Year</th>
-                               <td>₹2,00,000</td>
-                               <td>₹2,20,000</td>
-                               <td>₹2,60,000</td>
-                               <td>₹2,60,000</td>
-                               <td>₹3,00,000/US $3335</td>
+                               <td>₹2,10,000</td>
+                               <td>₹2,35,000</td>
+                               <td>₹2,70,000</td>
+                               <td>₹2,70,000</td>
+                               <td>₹3,10,000</td>
                              </tr>
                            </tbody>
                          </table>
@@ -236,11 +237,11 @@
                                <td>Sanskrit</td>
                                <td>₹5,000</td>
                              </tr>
-                             <tr class="table-light">
+                             <!-- <tr class="table-light">
                                <th scope="row">D</th>
                                <td>Field Visit</td>
                                <td>₹3,000</td>
-                             </tr>
+                             </tr> -->
                            </tbody>
                          </table>
                        </div>
@@ -249,7 +250,7 @@
                       </ul>
                       <h5><strong>Note: </strong></h5>
                       <ul class="language-list mt-2 p-0" style="list-style-type:none;">
-                       <li class="pb-3"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;Please note: if admitted, the fee must be paid in full within the time prescribed in the Admit Intimation.</li>
+                       <li class="pb-3" style="color: red;"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;Please note: if admitted, the fee must be paid in full within the time prescribed(including holidays) in the Admit Intimation.</li>
                        <li class="pb-3"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;To claim the Karnataka category fee, the candidates should have studied the last 7 years in Karnataka.[Not applicable for OCI (Overseas Citizens of India), PIO (Person of Indian 
                        Origin), and Foreign Nationals].</li>
                       </ul>
