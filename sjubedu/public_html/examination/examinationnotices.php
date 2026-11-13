@@ -164,6 +164,10 @@
 			  <a href="examinationmanual.php" class="nav-link">
                 <i class="fa-solid fa-angle-right me-2"></i>   Examination Manual
             </a>
+
+        <a href="convocation.php" class="nav-link">
+                <i class="fa-solid fa-angle-right me-2"></i>   Convocation
+            </a>
             
           </nav>
 
@@ -177,6 +181,92 @@
 			<div class="left_title_border mt-4 mb-2">
            <h3 class="br_title text_blue fw-bold"><span></span>  Examination Notices</h3> 
 			</div>
+
+
+
+       <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">RESULTS - PhD COURSEWORK EXAMINATION - OCTOBER 2026</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/RESULTS+-+PhD+COURSEWORK+EXAMINATION+-+OCTOBER+2026.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
+
+       <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">IMPORTANT NOTICE – Multidisciplinary Examination (MDE) – 31.10.2026</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/announcements/IMPORTANT+NOTICE+%E2%80%93+Multidisciplinary+Examination+(MDE)+%E2%80%93+31.10.2026.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
+
+       <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">NOTICE - Non-Issuance of Certificates and Marks Cards During the End Semester Examination Period</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/NOTICE+-+Non-Issuance+of+Certificates+and+Marks+Cards+During+the+End+Semester+Examination+Period.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
+
+     <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">NOTIFICATION - END SEMESTER EXAMINATION OCTOBER 2026_INSTRUCTIONS TO THE STUDENTS</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/announcements/NOTIFICATION+-+END+SEMESTER+EXAMINATION+OCTOBER+2026_INSTRUCTIONS+TO+THE+STUDENTS+(1).pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
+
+  <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">Notification - Supplementary Notice - Notice for Ignitors I, III, V - Odd Semester, 2026</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/Notification+-+Supplementary+Notice+-+Notice+for+Ignitors+I%2C+III%2C+V+-+Odd+Semester%2C+2026.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
+    
+   <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">NOTICE - Extension of Supplementary Examination Registration – Theory Courses only_OCTOBER 2026</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/NOTICE+-+Extension+of+Supplementary+Examination+Registration+%E2%80%93+Theory+Courses+only_OCTOBER+2026.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
+
+   <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">NOTIFICATION - INTERNAL MARKS – VERIFICATION AND CORRECTION</h5>
+            </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Exam+Notices/NOTIFICATION+-+INTERNAL+MARKS+%E2%80%93+VERIFICATION+AND+CORRECTION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+            </div> 
 
 <!-- 
    <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
