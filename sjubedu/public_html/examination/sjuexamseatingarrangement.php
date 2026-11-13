@@ -186,8 +186,19 @@
         </div>-->
         
 
-
       <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
+			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                <div class="calendar-icon">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <h5 class="calendar-title mb-0 pdf_title">ESE SUPPLEMENTARY OCTOBER 2026 SEATING ARRANGEMENT_14.11.2026 ALL THE SEASSION</h5>
+              </div>
+			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_14.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
+              View Details →
+             </a> 
+      </div>
+
+      <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
 			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
                 <div class="calendar-icon">
                   <i class="fas fa-file-pdf"></i>
@@ -197,7 +208,7 @@
 			 <a href="https://sjudata.s3.ap-south-1.amazonaws.com/Examinations/Seating+arrangements/ESE+SUPPLEMENTARY+OCTOBER+2026+SEATING+ARRANGEMENT_13.11.2026+ALL+THE+SEASSION.pdf" class="btn btn-success fw-semibold px-4 py-2" target="_blank">
               View Details →
              </a> 
-      </div>
+      </div> -->
 
           <!-- <div class="calendar-card d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-4">
 			<div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
