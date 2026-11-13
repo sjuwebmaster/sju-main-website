@@ -18,7 +18,7 @@
             <h2 class="batch-heading mb-3">Timings</h2>
             <ul class="list-unstyled batch-list">
               <li class="batch-item">
-                <strong>7:00 AM to 12:00 PM (closed on 15 April 2026)</strong>
+                <strong>7:00 AM to 12:00 PM </strong>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@
                         <p><strong>Admission Process : </strong>The applicants must fill in complete information on the online application form and upload all required 
                     certificates (whatever is available) and photos.</p>
                     <p><strong>Selection Process : </strong>The shortlisted candidates will be called for an interview. There are two rounds in the interview. 
-                    Once the final interview is over, candidates have to pay their programme fee within 3 days and the mode of payment must be online. The dates of the interview will be 
+                    Once the final interview is over, candidates have to pay their programme fee within <b>3 days, including holidays</b> and the mode of payment must be online. The dates of the interview will be 
                     communicated to the shortlisted candidates and will be announced on the website</p>
                     </div>
         </article>
@@ -154,7 +154,7 @@
                </div>
         </article>
         <article id="fee-structure" class="dept-section department_tab pgm-details mt-5 mb-5">
-            <h3 class="fw-bold text-blue mb-3">Fee Structure</h3>
+            <h3 class="fw-bold text-blue mb-3">Fee Structure for the Year 2027-2028</h3>
                <div class="table-responsive">
                          <table class="table table-responsive table-bordered align-middle fee-table table-col-compact">
                            <thead>
@@ -174,31 +174,31 @@
                                <td>₹5,000</td>
                                <td>₹5,000</td>
                                <td>₹5,000</td>
-                               <td>₹5,000 / US $56</td>
+                               <td>₹5,000</td>
                              </tr>
                              <tr>
                                <th scope="row">I Year</th>
-                               <td>₹1,05,000</td>
-                               <td>₹1,20,000</td>
-                               <td>₹1,65,000</td>
-                               <td>₹1,65,000</td>
-                               <td>₹2,05,000 / US $2278</td>
-                             </tr>
-                             <tr class="table-light">
-                               <th scope="row">II Year</th>
                                <td>₹1,10,000</td>
                                <td>₹1,25,000</td>
                                <td>₹1,70,000</td>
                                <td>₹1,70,000</td>
-                               <td>₹2,10,000 / US $2333</td>
+                               <td>₹2,10,000</td>
                              </tr>
-                             <tr>
-                               <th scope="row">III Year</th>
+                             <tr class="table-light">
+                               <th scope="row">II Year</th>
                                <td>₹1,15,000</td>
                                <td>₹1,30,000</td>
                                <td>₹1,75,000</td>
                                <td>₹1,75,000</td>
-                               <td>₹2,15,000 / US $2388</td>
+                               <td>₹2,15,000</td>
+                             </tr>
+                             <tr>
+                               <th scope="row">III Year</th>
+                               <td>₹1,20,000</td>
+                               <td>₹1,35,000</td>
+                               <td>₹1,80,000</td>
+                               <td>₹1,80,000</td>
+                               <td>₹2,20,000</td>
                              </tr>
                            </tbody>
                          </table>
@@ -225,11 +225,6 @@
                                <th>Sanskrit</th>
                                <td>₹5,000</td>
                              </tr>
-                             <tr class="table-light">
-                               <th scope="row">D</th>
-                               <th>Field Visit</th>
-                               <td>₹3,000</td>
-                             </tr>
                            </tbody>
                          </table>
                        </div>
@@ -238,7 +233,7 @@
                       </ul>
                       <h5><strong>Note: </strong></h5>
                       <ul class="language-list mt-2 p-0" style="list-style-type:none;">
-                       <li class="pb-3"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;Please note: if admitted, the fee must be paid in full within the time prescribed in the Admit Intimation.</li>
+                       <li class="pb-3" style="color: red;"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;Please note: if admitted, the fee must be paid in full within the time prescribed(including holidays) in the Admit Intimation.</li>
                        <li class="pb-3"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;To claim the Karnataka category fee, the candidates should have studied the last 7 years in Karnataka.[Not applicable for OCI (Overseas Citizens of India), PIO (Person of Indian 
                        Origin), and Foreign Nationals].</li>
                       </ul>
